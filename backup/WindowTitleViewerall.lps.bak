@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WindowTitleViewer"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="12"/>
+        <CursorPos Y="64"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="19" HistoryIndex="18">
+      <Position1>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="27" Column="52"/>
+      </Position1>
+      <Position2>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="28" Column="82"/>
+      </Position2>
+      <Position3>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="15" Column="54"/>
+      </Position3>
+      <Position4>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="22" Column="28"/>
+      </Position4>
+      <Position5>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="25" Column="58" TopLine="4"/>
+      </Position5>
+      <Position6>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="33" Column="110"/>
+      </Position6>
+      <Position7>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="41" Column="95" TopLine="9"/>
+      </Position7>
+      <Position8>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="33" Column="87"/>
+      </Position8>
+      <Position9>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="25" Column="77" TopLine="4"/>
+      </Position9>
+      <Position10>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="41"/>
+      </Position10>
+      <Position11>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="24" Column="78"/>
+      </Position11>
+      <Position12>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="22" Column="48"/>
+      </Position12>
+      <Position13>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="69" TopLine="17"/>
+      </Position13>
+      <Position14>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="30" Column="98"/>
+      </Position14>
+      <Position15>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="16" Column="40"/>
+      </Position15>
+      <Position16>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="18" Column="63" TopLine="4"/>
+      </Position16>
+      <Position17>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="37" Column="107" TopLine="9"/>
+      </Position17>
+      <Position18>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="32" Column="120" TopLine="5"/>
+      </Position18>
+      <Position19>
+        <Filename Value="WindowTitleViewerall.lpr"/>
+        <Caret Line="34" Column="63" TopLine="5"/>
+      </Position19>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos Y="45"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <Caret Line="25" Column="92"/>
+      </Position1>
+      <Position2>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <Caret Line="41"/>
+      </Position2>
+      <Position3>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <Caret Line="30" Column="100"/>
+      </Position3>
+      <Position4>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <Caret Line="41"/>
+      </Position4>
+      <Position5>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <Caret Line="69" TopLine="17"/>
+      </Position5>
+      <Position6>
+        <Filename Value="WindowTitleViewer.lpr"/>
+        <Caret Line="19" Column="76"/>
+      </Position6>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

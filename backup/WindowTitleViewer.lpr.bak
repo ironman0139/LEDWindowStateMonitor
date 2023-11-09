@@ -1,0 +1,41 @@
+program WindowTitleViewer;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF WINDOWS}
+  Windows,
+  {$ENDIF}
+  Classes, SysUtils;
+
+{$IFDEF WINDOWS}
+function EnumWindowsProc(Wnd: HWND; lParam: LPARAM): BOOL; stdcall;
+var
+  TitleLength: Integer;
+  Title: string;
+begin
+  Result := True;
+  TitleLength := GetWindowTextLength(Wnd);
+  if TitleLength > 0 then
+  begin
+    SetLength(Title, TitleLength);
+    GetWindowText(Wnd, PChar(Title), TitleLength + 1);
+    Writeln('Window Title: ', Title);
+  end;
+end;
+{$ENDIF}
+
+procedure EnumerateWindows;
+begin
+  {$IFDEF WINDOWS}
+  EnumWindows(@EnumWindowsProc, 0);
+  {$ENDIF}
+end;
+
+begin
+  repeat
+    EnumerateWindows;
+    Sleep(5000); // Warte 5 Sekunden, bevor die Fenster erneut aufgezählt werden
+  until False;
+end.
+
