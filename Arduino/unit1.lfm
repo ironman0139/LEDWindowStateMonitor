@@ -1,0 +1,24 @@
+object Form1: TForm1
+  Left = 299
+  Height = 240
+  Top = 122
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.6.4.0'
+  object LabelStatus: TLabel
+    Left = 70
+    Height = 15
+    Top = 70
+    Width = 60
+    Caption = 'LabelStatus'
+    ParentColor = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    OnStartTimer = Timer1StartTimer
+    left = 125
+    top = 155
+  end
+end
