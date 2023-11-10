@@ -50,7 +50,7 @@
         <UnitName Value="Unit1"/>
       </Unit1>
       <Unit2>
-        <Filename Value="C:\lazarus\components\synalist\synaser.pas"/>
+        <Filename Value="lib\synalist-code-r239-trunk\synaser.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
     </Units>
@@ -63,7 +63,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="C:\lazarus\components\synalist\"/>
+      <OtherUnitFiles Value="lib\synalist-code-r239-trunk"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

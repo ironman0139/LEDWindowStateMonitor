@@ -1,0 +1,29 @@
+object Leistung: TLeistung
+  Left = 368
+  Height = 443
+  Top = 192
+  Width = 902
+  Caption = 'Leistung'
+  ClientHeight = 443
+  ClientWidth = 902
+  LCLVersion = '1.6.4.0'
+  object ListView1: TListView
+    Left = 40
+    Height = 330
+    Top = 30
+    Width = 640
+    Columns = <    
+      item
+        Width = 10
+      end>
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 715
+    Height = 25
+    Top = 335
+    Width = 75
+    Caption = 'Button1'
+    TabOrder = 1
+  end
+end

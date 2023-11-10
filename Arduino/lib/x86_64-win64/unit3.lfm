@@ -1,0 +1,337 @@
+object Form3: TForm3
+  Left = 530
+  Height = 629
+  Top = 130
+  Width = 1119
+  Caption = 'Checkout'
+  ClientHeight = 629
+  ClientWidth = 1119
+  Color = 6908265
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object DateTimePicker1: TDateTimePicker
+    Left = 16
+    Height = 26
+    Top = 15
+    Width = 105
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 0
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 42666
+    Time = 0.239469351850857
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+    OnChange = DateTimePicker1Change
+  end
+  object Edit1: TEdit
+    Left = 16
+    Height = 23
+    Top = 44
+    Width = 80
+    TabOrder = 2
+    Text = 'Edit1'
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 90
+    Top = 486
+    Width = 184
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsUnderline]
+    Lines.Strings = (
+      'Memo1'
+    )
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+  end
+  object ListBox1: TListBox
+    Left = 16
+    Height = 160
+    Top = 180
+    Width = 88
+    ItemHeight = 0
+    TabOrder = 4
+  end
+  object ListBox2: TListBox
+    Left = 96
+    Height = 160
+    Top = 180
+    Width = 164
+    ItemHeight = 0
+    TabOrder = 5
+  end
+  object ListBox3: TListBox
+    Left = 248
+    Height = 160
+    Top = 180
+    Width = 152
+    ItemHeight = 0
+    TabOrder = 6
+  end
+  object ListBox4: TListBox
+    Left = 392
+    Height = 160
+    Top = 180
+    Width = 152
+    ItemHeight = 0
+    TabOrder = 7
+  end
+  object Memo2: TMemo
+    Left = 208
+    Height = 90
+    Top = 486
+    Width = 150
+    Lines.Strings = (
+      'Memo2'
+    )
+    TabOrder = 8
+    Visible = False
+  end
+  object Memo3: TMemo
+    Left = 352
+    Height = 90
+    Top = 486
+    Width = 150
+    Lines.Strings = (
+      'Memo3'
+    )
+    TabOrder = 9
+    Visible = False
+  end
+  object Memo4: TMemo
+    Left = 496
+    Height = 90
+    Top = 486
+    Width = 150
+    Lines.Strings = (
+      'Memo4'
+    )
+    TabOrder = 10
+    Visible = False
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 17
+    Top = 156
+    Width = 61
+    Caption = 'AuftragNr'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 160
+    Height = 17
+    Top = 156
+    Width = 30
+    Caption = 'Arzt:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 424
+    Height = 17
+    Top = 156
+    Width = 57
+    Caption = 'Versand:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button3: TButton
+    Left = 852
+    Height = 25
+    Top = 270
+    Width = 75
+    Caption = 'Button3'
+    OnClick = Button3Click
+    TabOrder = 11
+  end
+  object Label4: TLabel
+    Left = 288
+    Height = 17
+    Top = 156
+    Width = 49
+    Caption = 'Patient:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit3: TEdit
+    Left = 624
+    Height = 23
+    Top = 60
+    Width = 122
+    OnKeyUp = Edit3KeyUp
+    TabOrder = 1
+    Text = 'Edit3'
+  end
+  object GroupBox1: TGroupBox
+    Left = 692
+    Height = 174
+    Top = 436
+    Width = 138
+    Caption = 'GroupBox1'
+    ClientHeight = 154
+    ClientWidth = 134
+    TabOrder = 12
+    Visible = False
+    object Edit2: TEdit
+      Left = 30
+      Height = 23
+      Top = 6
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit2'
+    end
+    object Edit4: TEdit
+      Left = 30
+      Height = 23
+      Top = 42
+      Width = 80
+      TabOrder = 1
+      Text = 'Edit4'
+    end
+    object Edit5: TEdit
+      Left = 30
+      Height = 23
+      Top = 78
+      Width = 80
+      TabOrder = 2
+      Text = 'Edit5'
+    end
+    object Edit6: TEdit
+      Left = 30
+      Height = 23
+      Top = 114
+      Width = 80
+      TabOrder = 3
+      Text = 'Edit6'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 756
+    Height = 115
+    Top = 28
+    Width = 138
+    Caption = 'GroupBox2'
+    ClientHeight = 95
+    ClientWidth = 134
+    TabOrder = 13
+    
+  end
+  object ListBox5: TListBox
+    Left = 540
+    Height = 160
+    Top = 180
+    Width = 108
+    ItemHeight = 0
+    TabOrder = 14
+  end
+  object Label5: TLabel
+    Left = 540
+    Height = 17
+    Top = 156
+    Width = 46
+    Caption = 'Status:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 376
+    Height = 52
+    Top = 12
+    Width = 152
+    Caption = 'Checkin'
+    OnClick = Button1Click
+    TabOrder = 15
+  end
+  object Button2: TButton
+    Left = 376
+    Height = 53
+    Top = 76
+    Width = 152
+    Caption = 'Checkout'
+    TabOrder = 16
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Params.Strings = (
+      'Port=8889'
+    )
+    Transaction = SQLTransaction1
+    Options = []
+    left = 184
+    top = 480
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 260
+    top = 480
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQLConnection1
+    Options = []
+    left = 336
+    top = 480
+  end
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    OnGetValue = frReport1GetValue
+    left = 416
+    top = 480
+  end
+end

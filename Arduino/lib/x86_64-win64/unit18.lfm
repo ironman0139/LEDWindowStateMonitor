@@ -1,0 +1,246 @@
+object Form18: TForm18
+  Left = 312
+  Height = 822
+  Top = 144
+  Width = 1834
+  Caption = 'Form18'
+  ClientHeight = 822
+  ClientWidth = 1834
+  Color = clActiveBorder
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 72
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 20
+    Height = 25
+    Top = 15
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object ListView2: TListView
+    Left = 64
+    Height = 400
+    Top = 136
+    Width = 264
+    Columns = <    
+      item
+        Caption = 'Kunde'
+        Width = 80
+      end    
+      item
+        Caption = 'Patient'
+        Width = 130
+      end    
+      item
+        Caption = 'Schale'
+      end>
+    GridLines = True
+    RowSelect = True
+    TabOrder = 1
+    ViewStyle = vsReport
+  end
+  object Label2: TLabel
+    Left = 144
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 408
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label3'
+    ParentColor = False
+  end
+  object ListView3: TListView
+    Left = 408
+    Height = 400
+    Top = 136
+    Width = 264
+    Columns = <    
+      item
+        Caption = 'Kunde'
+        Width = 80
+      end    
+      item
+        Caption = 'Patient'
+        Width = 130
+      end    
+      item
+        Caption = 'Schale'
+      end>
+    GridLines = True
+    RowSelect = True
+    TabOrder = 2
+    ViewStyle = vsReport
+  end
+  object Label4: TLabel
+    Left = 480
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label4'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 792
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label5'
+    ParentColor = False
+  end
+  object ListView4: TListView
+    Left = 784
+    Height = 400
+    Top = 136
+    Width = 264
+    Columns = <    
+      item
+        Caption = 'Kunde'
+        Width = 80
+      end    
+      item
+        Caption = 'Patient'
+        Width = 130
+      end    
+      item
+        Caption = 'Schale'
+      end>
+    GridLines = True
+    RowSelect = True
+    TabOrder = 3
+    ViewStyle = vsReport
+  end
+  object Label6: TLabel
+    Left = 864
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label6'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 1192
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label7'
+    ParentColor = False
+  end
+  object ListView5: TListView
+    Left = 1184
+    Height = 400
+    Top = 136
+    Width = 264
+    Columns = <    
+      item
+        Caption = 'Kunde'
+        Width = 80
+      end    
+      item
+        Caption = 'Patient'
+        Width = 130
+      end    
+      item
+        Caption = 'Schale'
+      end>
+    GridLines = True
+    RowSelect = True
+    TabOrder = 4
+    ViewStyle = vsReport
+  end
+  object Label8: TLabel
+    Left = 1264
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label8'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 1568
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label9'
+    ParentColor = False
+  end
+  object ListView6: TListView
+    Left = 1560
+    Height = 400
+    Top = 136
+    Width = 264
+    Columns = <    
+      item
+        Caption = 'Kunde'
+        Width = 80
+      end    
+      item
+        Caption = 'Patient'
+        Width = 130
+      end    
+      item
+        Caption = 'Schale'
+      end>
+    GridLines = True
+    RowSelect = True
+    TabOrder = 5
+    ViewStyle = vsReport
+  end
+  object Label10: TLabel
+    Left = 1640
+    Height = 15
+    Top = 104
+    Width = 40
+    Caption = 'Label10'
+    ParentColor = False
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    Options = []
+    SkipLibraryVersionCheck = False
+    left = 632
+    top = 744
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 696
+    top = 744
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQLConnection1
+    Options = []
+    left = 760
+    top = 744
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    AfterConnect = SQLConnector1AfterConnect
+    KeepConnection = False
+    Options = []
+    left = 824
+    top = 744
+  end
+end

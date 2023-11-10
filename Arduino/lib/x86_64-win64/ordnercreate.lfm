@@ -1,0 +1,9 @@
+object Form16: TForm16
+  Left = 392
+  Height = 551
+  Top = 192
+  Width = 648
+  Caption = 'Ordner Create'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+end
