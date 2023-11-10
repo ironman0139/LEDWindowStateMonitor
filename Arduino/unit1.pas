@@ -15,6 +15,7 @@ type
 
   TForm1 = class(TForm)
     Edit1: TEdit;
+    Label1: TLabel;
     LabelStatus: TLabel;
     Timer1: TTimer;
     SerialPort: TBlockSerial;
@@ -25,6 +26,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure Timer1StartTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure TrayIcon1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -91,7 +93,7 @@ begin
   SerialPort := TBlockSerial.Create;
   SerialPort.Connect('COM3'); // Beispiel COM1, bitte anpassen
   SerialPort.Config(9600, 8, 'N', SB1, False, False);
-  Hide;
+  Application.ShowMainForm := False;
   TrayIcon1.Visible := True; // Zeige das Tray-Icon an
 end;
 
@@ -119,6 +121,11 @@ begin
   FoundNetworkDatabase := False;
   EnumerateWindows;
   UpdateStatusLabel;
+end;
+
+procedure TForm1.TrayIcon1Click(Sender: TObject);
+begin
+  Form1.visible:=True;
 end;
 
 

@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 754
+  Left = 295
   Height = 109
-  Top = 280
+  Top = 327
   Width = 207
-  Caption = 'Form1'
+  Caption = 'SQLMonitor'
   ClientHeight = 109
   ClientWidth = 207
   OnClose = FormClose
@@ -11,7 +11,7 @@ object Form1: TForm1
   OnDestroy = FormDestroy
   LCLVersion = '1.6.4.0'
   object LabelStatus: TLabel
-    Left = 20
+    Left = 10
     Height = 15
     Top = 10
     Width = 60
@@ -171,6 +171,7 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000000000000000
       0000
     }
+    OnClick = TrayIcon1Click
     left = 15
     top = 55
   end
