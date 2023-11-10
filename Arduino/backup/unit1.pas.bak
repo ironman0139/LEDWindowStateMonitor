@@ -8,14 +8,21 @@ uses
   {$IFDEF WINDOWS}
   Windows,
   {$ENDIF}
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,Serial,Synaser;
 
 type
   { TForm1 }
 
   TForm1 = class(TForm)
+    Edit1: TEdit;
     LabelStatus: TLabel;
     Timer1: TTimer;
+    SerialPort: TBlockSerial;
+    TrayIcon1: TTrayIcon;
+    procedure Edit1Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure Timer1StartTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
@@ -62,14 +69,49 @@ end;
 procedure UpdateStatusLabel;
 begin
   if Form1.FoundNetworkDatabase then
-    Form1.LabelStatus.Caption := 'Netzwerkdatenbank gefunden!'
+  begin
+    Form1.LabelStatus.Caption := 'Netzwerkdatenbank gefunden!' ;
+    Form1.Edit1.Text := 'Ja';
+  end
   else
+  begin
     Form1.LabelStatus.Caption := 'Netzwerkdatenbank nicht gefunden!';
+    Form1.Edit1.Text := 'Nein'
+  end;
 end;
 
 procedure TForm1.Timer1StartTimer(Sender: TObject);
 begin
 
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+    // Öffnen Sie die serielle Schnittstelle (angepasst an Ihren Arduino-Port und Baudrate)
+  SerialPort := TBlockSerial.Create;
+  SerialPort.Connect('COM3'); // Beispiel COM1, bitte anpassen
+  SerialPort.Config(9600, 8, 'N', SB1, False, False);
+  Hide;
+  TrayIcon1.Visible := True; // Zeige das Tray-Icon an
+end;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+  if Edit1.Text='Ja' then
+    SerialPort.SendString('J')
+    else
+        SerialPort.SendString('N');
+
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+    TrayIcon1.Visible := False;
+end;
+
+procedure TForm1.FormDestroy(Sender: TObject);
+begin
+    SerialPort.Free;
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
