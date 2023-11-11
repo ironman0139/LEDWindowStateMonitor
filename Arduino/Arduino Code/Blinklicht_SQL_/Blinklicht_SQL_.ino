@@ -1,3 +1,5 @@
+// Tim Eisenmann WindowStateMonitor v0.04
+
 #include <Adafruit_NeoPixel.h>
 
 #define PIN            6  // Hier den Pin definieren, an dem die Datenleitung der WS2812 angeschlossen ist
@@ -47,11 +49,12 @@ void loop() {
 
 if (ledstat == 1)
 {
-  rundumlichtEffekt(150);
+  rundumlichtEffekt(200);
   }
 else if (ledstat ==0)
 {
   strip.show(); // Initialize all pixels to 'off'
-  strip.setPixelColor(0, strip.Color(0, 153, 0)); // Rot}
+  strip.setPixelColor(0, strip.Color(127, 255, 0)); // grün}
+  //strip.setPixelColor(0, strip.Color(255, 20, 147));
 }
 }
