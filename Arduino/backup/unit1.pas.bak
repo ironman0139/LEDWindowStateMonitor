@@ -15,6 +15,7 @@ type
 
   TForm1 = class(TForm)
     Edit1: TEdit;
+    Label1: TLabel;
     LabelStatus: TLabel;
     Timer1: TTimer;
     SerialPort: TBlockSerial;
@@ -23,6 +24,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormWindowStateChange(Sender: TObject);
     procedure Timer1StartTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TrayIcon1Click(Sender: TObject);
@@ -113,6 +115,12 @@ end;
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
     SerialPort.Free;
+end;
+
+procedure TForm1.FormWindowStateChange(Sender: TObject);
+begin
+   if Form1.WindowState = wsMinimized then  Application.ShowMainForm := False;
+
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);

@@ -24,6 +24,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormWindowStateChange(Sender: TObject);
     procedure Timer1StartTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TrayIcon1Click(Sender: TObject);
@@ -114,6 +115,17 @@ end;
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
     SerialPort.Free;
+end;
+
+procedure TForm1.FormWindowStateChange(Sender: TObject);
+begin
+   if Form1.WindowState = wsMinimized
+     then
+     begin
+     Application.ShowMainForm := False;
+     Form1.visible:=False;
+     end;
+
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
