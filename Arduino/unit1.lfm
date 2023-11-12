@@ -1,16 +1,16 @@
 object Form1: TForm1
   Left = 295
-  Height = 139
+  Height = 195
   Top = 327
   Width = 207
   Caption = 'SQLMonitor'
-  ClientHeight = 139
+  ClientHeight = 195
   ClientWidth = 207
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnWindowStateChange = FormWindowStateChange
-  SessionProperties = 'ComboBox1.Text'
+  SessionProperties = 'ComboBox1.Text;Edit2.Text'
   LCLVersion = '1.6.4.0'
   object LabelStatus: TLabel
     Left = 10
@@ -30,12 +30,12 @@ object Form1: TForm1
     Text = 'Edit1'
   end
   object Label1: TLabel
-    Left = 165
-    Height = 17
-    Top = 110
+    Left = 175
+    Height = 38
+    Top = 170
     Width = 30
     Anchors = [akTop, akLeft, akRight, akBottom]
-    Caption = 'v.0.04'
+    Caption = 'v.0.06'
     ParentColor = False
   end
   object ComboBox1: TComboBox
@@ -46,6 +46,40 @@ object Form1: TForm1
     ItemHeight = 15
     TabOrder = 1
     Text = 'ComboBox1'
+  end
+  object Button1: TButton
+    Left = 110
+    Height = 25
+    Top = 104
+    Width = 40
+    Caption = 'COM'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 5
+    Height = 23
+    Top = 135
+    Width = 100
+    TabOrder = 3
+    Text = '127 255 0'
+  end
+  object Button2: TButton
+    Left = 110
+    Height = 25
+    Top = 133
+    Width = 40
+    Caption = 'Farbe'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object LabelSelectedColor: TLabel
+    Left = 10
+    Height = 15
+    Top = 170
+    Width = 101
+    Caption = 'LabelSelectedColor'
+    ParentColor = False
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

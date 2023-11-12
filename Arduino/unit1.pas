@@ -15,14 +15,20 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
+    Edit2: TEdit;
     Label1: TLabel;
+    LabelSelectedColor: TLabel;
     LabelStatus: TLabel;
     Timer1: TTimer;
     SerialPort: TBlockSerial;
     TrayIcon1: TTrayIcon;
     XMLPropStorage1: TXMLPropStorage;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -108,9 +114,50 @@ begin
   if Edit1.Text='Ja' then
     SerialPort.SendString('J')
     else
-        SerialPort.SendString('N');
+        SerialPort.SendString('N ' + Edit2.Text);
 
 end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  Port: string;
+begin
+  // Finden Sie alle verfügbaren COM-Ports und fügen Sie sie zur ComboBox hinzu
+  Port := GetSerialPortNames;
+    //ComboBox1.Items.Add(Port);
+    ShowMessage(Port);
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  ColorDialog: TColorDialog;
+  SelectedColor: TColor;
+  R, G, B: Byte;
+begin
+  ColorDialog := TColorDialog.Create(Self);
+
+  try
+    // Einstellungen für den Dialog (optional)
+    ColorDialog.Color := LabelSelectedColor.Font.Color;
+
+    // Dialog anzeigen und prüfen, ob der Benutzer OK geklickt hat
+    if ColorDialog.Execute then
+    begin
+      // Die ausgewählte Farbe verwenden
+      SelectedColor := ColorDialog.Color;
+      LabelSelectedColor.Font.Color := SelectedColor;
+
+      // Anzeige in Label
+      LabelSelectedColor.Caption := Format('Ausgewählte Farbe: %d %d %d', [Red(SelectedColor), Green(SelectedColor), Blue(SelectedColor)]);
+
+      // Anzeige in Edit2
+      Edit2.Text := Format('%d %d %d', [Red(SelectedColor), Green(SelectedColor), Blue(SelectedColor)]);
+    end;
+  finally
+    ColorDialog.Free;
+  end;
+end;
+
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
