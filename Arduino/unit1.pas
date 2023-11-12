@@ -175,6 +175,7 @@ end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
+    SerialPort.SendString('N 0 0 0');
     SerialPort.Free;
 end;
 
