@@ -8,7 +8,6 @@
       <Unit0>
         <Filename Value="LEDWindowStateMonitor.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos Y="21"/>
         <UsageCount Value="22"/>
@@ -21,7 +20,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <TopLine Value="100"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="148"/>
         <CursorPos X="29" Y="110"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
