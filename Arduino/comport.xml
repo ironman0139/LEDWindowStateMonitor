@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CONFIG>
   <TApplication>
-    <Form1 Edit2_Text="0 128 255" ComboBox1_Text="COM4"/>
+    <Form1 Form1_Top="346" Edit2_Text="0 128 255" Form1_Left="841" ComboBox1_Text="COM4"/>
   </TApplication>
 </CONFIG>

@@ -152,6 +152,7 @@ begin
 
       // Anzeige in Edit2
       Edit2.Text := Format('%d %d %d', [Red(SelectedColor), Green(SelectedColor), Blue(SelectedColor)]);
+      SerialPort.SendString('N ' + Edit2.Text);
     end;
   finally
     ColorDialog.Free;
