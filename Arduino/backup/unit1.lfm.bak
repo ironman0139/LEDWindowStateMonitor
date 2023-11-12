@@ -3,7 +3,7 @@ object Form1: TForm1
   Height = 229
   Top = 327
   Width = 240
-  Caption = 'SQLMonitor'
+  Caption = 'LEDWindowStateMonitor'
   ClientHeight = 229
   ClientWidth = 240
   OnClose = FormClose

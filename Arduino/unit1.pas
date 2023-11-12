@@ -107,6 +107,7 @@ begin
   SerialPort.Config(9600, 8, 'N', SB1, False, False);
   Application.ShowMainForm := False;
   TrayIcon1.Visible := True; // Zeige das Tray-Icon an
+  TrayIcon1.ShowBalloonHint;
 end;
 
 procedure TForm1.Edit1Change(Sender: TObject);
