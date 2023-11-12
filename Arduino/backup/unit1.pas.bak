@@ -17,6 +17,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -29,6 +30,7 @@ type
     XMLPropStorage1: TXMLPropStorage;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -158,6 +160,11 @@ begin
   finally
     ColorDialog.Free;
   end;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+   SerialPort.SendString('N 0 0 0');
 end;
 
 

@@ -81,6 +81,15 @@ object Form1: TForm1
     Caption = 'LabelSelectedColor'
     ParentColor = False
   end
+  object Button3: TButton
+    Left = 10
+    Height = 25
+    Top = 195
+    Width = 40
+    Caption = 'Off'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
   object Timer1: TTimer
     OnTimer = Timer1Timer
     OnStartTimer = Timer1StartTimer
