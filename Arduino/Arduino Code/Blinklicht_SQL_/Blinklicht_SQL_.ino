@@ -1,4 +1,4 @@
-// Tim Eisenmann WindowStateMonitor v0.06
+// Tim Eisenmann LEDWindowStateMonitor v0.06
 
 #include <Adafruit_NeoPixel.h>
 
