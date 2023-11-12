@@ -35,7 +35,7 @@ object Form1: TForm1
     Height = 15
     Top = 205
     Width = 111
-    Caption = 'Tim Eisenmannv.0.06'
+    Caption = 'Tim Eisenmann v0.06'
     ParentColor = False
   end
   object ComboBox1: TComboBox
