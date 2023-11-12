@@ -8,18 +8,21 @@ uses
   {$IFDEF WINDOWS}
   Windows,
   {$ENDIF}
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,Serial,Synaser;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls, XMLPropStorage, Serial, Synaser;
 
 type
   { TForm1 }
 
   TForm1 = class(TForm)
+    ComboBox1: TComboBox;
     Edit1: TEdit;
     Label1: TLabel;
     LabelStatus: TLabel;
     Timer1: TTimer;
     SerialPort: TBlockSerial;
     TrayIcon1: TTrayIcon;
+    XMLPropStorage1: TXMLPropStorage;
     procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -91,8 +94,10 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
     // Öffnen Sie die serielle Schnittstelle (angepasst an Ihren Arduino-Port und Baudrate)
+  XMLPropStorage1.Restore;
   SerialPort := TBlockSerial.Create;
-  SerialPort.Connect('COM3'); // Beispiel COM1, bitte anpassen
+  SerialPort.Connect(ComboBox1.Text); // Beispiel COM1, bitte anpassen
+  //Label1.Caption := ComboBox1.Text;
   SerialPort.Config(9600, 8, 'N', SB1, False, False);
   Application.ShowMainForm := False;
   TrayIcon1.Visible := True; // Zeige das Tray-Icon an

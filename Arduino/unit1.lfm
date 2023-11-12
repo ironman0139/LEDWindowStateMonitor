@@ -1,15 +1,16 @@
 object Form1: TForm1
   Left = 295
-  Height = 109
+  Height = 139
   Top = 327
   Width = 207
   Caption = 'SQLMonitor'
-  ClientHeight = 109
+  ClientHeight = 139
   ClientWidth = 207
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnWindowStateChange = FormWindowStateChange
+  SessionProperties = 'ComboBox1.Text'
   LCLVersion = '1.6.4.0'
   object LabelStatus: TLabel
     Left = 10
@@ -30,11 +31,21 @@ object Form1: TForm1
   end
   object Label1: TLabel
     Left = 165
-    Height = 15
-    Top = 85
+    Height = 17
+    Top = 110
     Width = 30
-    Caption = 'v.0.03'
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'v.0.04'
     ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    Left = 5
+    Height = 23
+    Top = 104
+    Width = 100
+    ItemHeight = 15
+    TabOrder = 1
+    Text = 'ComboBox1'
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
@@ -183,5 +194,11 @@ object Form1: TForm1
     OnClick = TrayIcon1Click
     left = 15
     top = 55
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    FileName = 'comport.xml'
+    left = 150
+    top = 15
   end
 end
