@@ -9,7 +9,7 @@ uses
   Windows,
   {$ENDIF}
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, XMLPropStorage, Serial, Synaser;
+  ExtCtrls, XMLPropStorage, ComCtrls, Serial, Synaser;
 
 type
   { TForm1 }
@@ -110,6 +110,8 @@ begin
   Application.ShowMainForm := False;
   TrayIcon1.Visible := True; // Zeige das Tray-Icon an
   TrayIcon1.ShowBalloonHint;
+  sleep(500);
+  SerialPort.SendString('N ' + Edit2.Text);
 end;
 
 procedure TForm1.Edit1Change(Sender: TObject);
@@ -196,6 +198,7 @@ begin
   EnumerateWindows;
   UpdateStatusLabel;
 end;
+
 
 procedure TForm1.TrayIcon1Click(Sender: TObject);
 begin

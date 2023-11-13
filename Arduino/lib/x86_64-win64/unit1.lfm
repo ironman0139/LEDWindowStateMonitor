@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 295
-  Height = 229
+  Height = 234
   Top = 327
   Width = 240
   Caption = 'LEDWindowStateMonitor'
-  ClientHeight = 229
+  ClientHeight = 234
   ClientWidth = 240
   OnClose = FormClose
   OnCreate = FormCreate
@@ -31,11 +31,11 @@ object Form1: TForm1
     Text = 'Edit1'
   end
   object Label1: TLabel
-    Left = 120
+    Left = 105
     Height = 15
-    Top = 205
+    Top = 210
     Width = 111
-    Caption = 'Tim Eisenmann v0.06'
+    Caption = 'Tim Eisenmann v0.08'
     ParentColor = False
   end
   object ComboBox1: TComboBox
@@ -82,9 +82,9 @@ object Form1: TForm1
     ParentColor = False
   end
   object Button3: TButton
-    Left = 10
+    Left = 15
     Height = 25
-    Top = 195
+    Top = 200
     Width = 40
     Caption = 'Off'
     OnClick = Button3Click
