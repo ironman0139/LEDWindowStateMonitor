@@ -20,9 +20,9 @@ void setup() {
 
 void rundumlichtEffekt(int dauer) {
   // Rundumlicht-Effekt
-  for (int i = 1; i < NUMPIXELS; i++) {
+  for (int i = 0; i < NUMPIXELS - 1; i++) {
+    strip.setPixelColor(6, strip.Color(255, 69, 0)); // Rot
     strip.setPixelColor(i, strip.Color(255, 69, 0)); // Rot
-    strip.setPixelColor(0, strip.Color(0, 0, 0)); // Rot
     strip.show();
     delay(dauer);
     strip.setPixelColor(i, strip.Color(0, 0, 0)); // Ausschalten
@@ -30,7 +30,7 @@ void rundumlichtEffekt(int dauer) {
 }
 
 void setzeFarbe(int r, int g, int b) {
-  strip.setPixelColor(0, strip.Color(r, g, b));
+  strip.setPixelColor(6, strip.Color(r, g, b));
   strip.show();
   // Speichere die zuletzt empfangenen RGB-Werte
   lastR = r;
@@ -70,7 +70,7 @@ void loop() {
   }
 
   if (ledstat == 1) {
-    rundumlichtEffekt(200);
+    rundumlichtEffekt(80);
   } else if (ledstat == 0) {
     strip.show(); // Initialize all pixels to 'off'
     // Setze die Farbe auf Basis der zuletzt empfangenen RGB-Werte
