@@ -1,4 +1,4 @@
-// Tim Eisenmann v0.08
+// Tim Eisenmann v0.08-alpha
 
 #include <Adafruit_NeoPixel.h>
 
