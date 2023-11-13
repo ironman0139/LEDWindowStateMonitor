@@ -1,0 +1,1176 @@
+object Form2: TForm2
+  Left = 344
+  Height = 985
+  Top = 16
+  Width = 1541
+  Caption = 'Kundenmanager'
+  ClientHeight = 985
+  ClientWidth = 1541
+  Color = 9803157
+  DefaultMonitor = dmMainForm
+  OnClose = FormClose
+  OnCreate = FormCreate
+  ShowInTaskBar = stAlways
+  LCLVersion = '1.6.4.0'
+  object GroupBox1: TGroupBox
+    Left = 24
+    Height = 317
+    Top = 138
+    Width = 848
+    Caption = 'Manager'
+    ClientHeight = 297
+    ClientWidth = 844
+    Color = 6908265
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Height = 17
+      Top = 46
+      Width = 43
+      Caption = 'Name:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 80
+      Height = 23
+      Top = 6
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+    object Label4: TLabel
+      Left = 16
+      Height = 17
+      Top = 86
+      Width = 48
+      Caption = 'Straße:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit2: TEdit
+      Left = 80
+      Height = 23
+      Top = 40
+      Width = 152
+      OnExit = Edit2Exit
+      TabOrder = 1
+      Text = 'Edit2'
+    end
+    object Edit3: TEdit
+      Left = 408
+      Height = 23
+      Top = 5
+      Width = 190
+      TabOrder = 2
+      Text = 'Edit3'
+    end
+    object Label2: TLabel
+      Left = 30
+      Height = 17
+      Top = 166
+      Width = 29
+      Caption = 'Ort: '
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit4: TEdit
+      Left = 80
+      Height = 23
+      Top = 82
+      Width = 152
+      TabOrder = 3
+      Text = 'Edit4'
+    end
+    object Label5: TLabel
+      Left = 25
+      Height = 17
+      Top = 126
+      Width = 34
+      Caption = 'PLZ :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit5: TEdit
+      Left = 80
+      Height = 23
+      Top = 160
+      Width = 152
+      TabOrder = 5
+      Text = 'Edit5'
+    end
+    object Label6: TLabel
+      Left = 16
+      Height = 17
+      Top = 208
+      Width = 36
+      Caption = 'Land:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 345
+      Height = 17
+      Top = 49
+      Width = 41
+      Caption = 'Email:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit6: TEdit
+      Left = 80
+      Height = 23
+      Top = 120
+      Width = 154
+      TabOrder = 4
+      Text = 'Edit6'
+    end
+    object Label8: TLabel
+      Left = 336
+      Height = 17
+      Top = 130
+      Width = 50
+      Caption = 'Telefon:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit7: TEdit
+      Left = 408
+      Height = 23
+      Top = 49
+      Width = 190
+      TabOrder = 6
+      Text = 'Edit7'
+    end
+    object Label9: TLabel
+      Left = 358
+      Height = 17
+      Top = 170
+      Width = 28
+      Caption = 'Fax:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit8: TEdit
+      Left = 408
+      Height = 23
+      Top = 130
+      Width = 190
+      TabOrder = 7
+      Text = 'Edit8'
+    end
+    object Label10: TLabel
+      Left = 16
+      Height = 17
+      Top = 6
+      Width = 40
+      Caption = 'Kd. ID'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit9: TEdit
+      Left = 408
+      Height = 23
+      Top = 165
+      Width = 190
+      TabOrder = 8
+      Text = 'Edit9'
+    end
+    object ComboBox4: TComboBox
+      Left = 80
+      Height = 23
+      Top = 200
+      Width = 154
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Deutschland'
+        'Austria'
+        'Schweiz'
+        'England'
+      )
+      TabOrder = 9
+      Text = 'Deutschland'
+    end
+    object Label14: TLabel
+      Left = 168
+      Height = 15
+      Top = 10
+      Width = 40
+      Caption = 'Label14'
+      ParentColor = False
+      Visible = False
+    end
+    object ComboBox3: TComboBox
+      Left = 80
+      Height = 23
+      Top = 244
+      Width = 154
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Implantec'
+        'UPS'
+        'GO!'
+        'UPS Express'
+        'UPS Express Saver'
+        'Kein'
+      )
+      TabOrder = 10
+      Text = 'Implantec'
+    end
+    object Label17: TLabel
+      Left = 16
+      Height = 17
+      Top = 250
+      Width = 57
+      Caption = 'Versand:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox5: TComboBox
+      Left = 408
+      Height = 23
+      Top = 211
+      Width = 100
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'WeTransfer'
+        'Auftragsverwaltung'
+        'Post'
+      )
+      TabOrder = 11
+      Text = 'WeTransfer'
+    end
+    object Label25: TLabel
+      Left = 265
+      Height = 17
+      Top = 217
+      Width = 121
+      Caption = 'Datenübertragung:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label26: TLabel
+      Left = 323
+      Height = 17
+      Top = 8
+      Width = 63
+      Caption = 'Kd. ID int:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label27: TLabel
+      Left = 290
+      Height = 17
+      Top = 251
+      Width = 96
+      Caption = 'Dienstleistung:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox8: TComboBox
+      Left = 408
+      Height = 23
+      Top = 243
+      Width = 100
+      ItemHeight = 15
+      Items.Strings = (
+        'Smile in a Box'
+        'Bredent Connect'
+      )
+      TabOrder = 12
+    end
+    object Label28: TLabel
+      Left = 656
+      Height = 17
+      Top = 5
+      Width = 86
+      Caption = 'Suchbegriffe:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Memo3: TMemo
+      Left = 656
+      Height = 193
+      Top = 32
+      Width = 176
+      Lines.Strings = (
+        'Memo3'
+      )
+      TabOrder = 13
+    end
+    object Label29: TLabel
+      Left = 352
+      Height = 17
+      Top = 90
+      Width = 34
+      Caption = 'PDF:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit10: TEdit
+      Left = 408
+      Height = 23
+      Top = 90
+      Width = 190
+      TabOrder = 14
+      Text = 'Edit10'
+    end
+  end
+  object Button3: TButton
+    Left = 752
+    Height = 48
+    Top = 400
+    Width = 107
+    Caption = 'Erstellen'
+    OnClick = Button3Click
+    TabOrder = 1
+  end
+  object Button4: TButton
+    Left = 712
+    Height = 25
+    Top = 860
+    Width = 75
+    Caption = 'Test'
+    OnClick = Button4Click
+    TabOrder = 2
+    Visible = False
+  end
+  object Memo1: TMemo
+    Left = 712
+    Height = 26
+    Top = 859
+    Width = 54
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 3
+    Visible = False
+  end
+  object GroupBox2: TGroupBox
+    Left = 24
+    Height = 492
+    Top = 486
+    Width = 636
+    Caption = 'Implantat'
+    ClientHeight = 472
+    ClientWidth = 632
+    Color = 6908265
+    ParentColor = False
+    TabOrder = 4
+    object Label12: TLabel
+      Left = 16
+      Height = 17
+      Top = 17
+      Width = 111
+      Caption = 'Implantatsystem:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox1: TComboBox
+      Left = 144
+      Height = 23
+      Hint = 'implant_list.txt bearbeiten um neue '#13#10'Systeme hinzuzufügen !'
+      Top = 11
+      Width = 100
+      ItemHeight = 15
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object CheckBox2: TCheckBox
+      Left = 450
+      Height = 19
+      Top = 7
+      Width = 72
+      Caption = 'Hülsenlos'
+      Font.Color = clMenu
+      OnChange = CheckBox2Change
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Label11: TLabel
+      Left = 16
+      Height = 17
+      Top = 90
+      Width = 29
+      Caption = 'Fee:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox2: TComboBox
+      Left = 64
+      Height = 23
+      Top = 84
+      Width = 56
+      ItemHeight = 15
+      Items.Strings = (
+        'Ja'
+        'Nein'
+      )
+      TabOrder = 2
+    end
+    object Label13: TLabel
+      Left = 305
+      Height = 17
+      Top = 48
+      Width = 48
+      Caption = 'Offset: '
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Memo2: TMemo
+      Left = 16
+      Height = 282
+      Top = 168
+      Width = 424
+      Lines.Strings = (
+        'Kommentar'
+      )
+      TabOrder = 3
+    end
+    object Edit12: TEdit
+      Left = 360
+      Height = 23
+      Top = 42
+      Width = 80
+      OnExit = Edit12Exit
+      TabOrder = 4
+    end
+    object Edit13: TEdit
+      Left = 360
+      Height = 23
+      Top = 7
+      Width = 80
+      TabOrder = 5
+    end
+    object ComboBox6: TComboBox
+      Left = 64
+      Height = 23
+      Top = 120
+      Width = 148
+      ItemHeight = 15
+      Items.Strings = (
+        '3D Druck'
+        '3D Print'
+        'Planung 3D-Schablone'
+        'guide planning'
+        'Planung gesamt'
+        'Teilplanung'
+      )
+      TabOrder = 6
+    end
+    object Label22: TLabel
+      Left = 23
+      Height = 17
+      Top = 125
+      Width = 22
+      Caption = 'Art:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label23: TLabel
+      Left = 305
+      Height = 17
+      Top = 13
+      Width = 48
+      Caption = 'Anzahl:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object CheckBox3: TCheckBox
+      Left = 522
+      Height = 19
+      Top = 7
+      Width = 89
+      Caption = 'Ohne Hülsen'
+      OnChange = CheckBox3Change
+      TabOrder = 7
+    end
+    object Label24: TLabel
+      Left = 30
+      Height = 17
+      Top = 48
+      Width = 97
+      Caption = 'Hülsensystem:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMenu
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox7: TComboBox
+      Left = 144
+      Height = 23
+      Top = 42
+      Width = 100
+      ItemHeight = 15
+      TabOrder = 8
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 1288
+    Height = 321
+    Top = 138
+    Width = 202
+    Caption = 'Bearbeiten'
+    ClientHeight = 301
+    ClientWidth = 198
+    Color = 6908265
+    ParentColor = False
+    TabOrder = 5
+    object Shape1: TShape
+      Left = 64
+      Height = 40
+      Top = 234
+      Width = 90
+      Brush.Color = clRed
+      OnChangeBounds = Shape1ChangeBounds
+      Shape = stRoundRect
+    end
+    object Edit_KdID: TEdit
+      Left = 64
+      Height = 23
+      Top = 6
+      Width = 128
+      OnChange = Edit_KdIDChange
+      OnClick = Edit_KdIDClick
+      OnKeyUp = Edit_KdIDKeyUp
+      TabOrder = 0
+    end
+    object Label15: TLabel
+      Left = 16
+      Height = 15
+      Top = 16
+      Width = 28
+      Caption = 'KdID:'
+      Font.Color = clMenu
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label16: TLabel
+      Left = 16
+      Height = 15
+      Top = 64
+      Width = 32
+      Caption = 'Name'
+      Font.Color = clMenu
+      ParentColor = False
+      ParentFont = False
+    end
+    object Button6: TButton
+      Left = 69
+      Height = 25
+      Top = 96
+      Width = 75
+      Caption = 'Suche'
+      OnClick = Button6Click
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 69
+      Height = 57
+      Top = 128
+      Width = 75
+      Caption = 'Update'
+      OnClick = Button2Click
+      OnKeyUp = Button2KeyUp
+      TabOrder = 2
+    end
+    object Button1: TButton
+      Left = 69
+      Height = 25
+      Top = 240
+      Width = 75
+      Caption = 'Löschen'
+      Color = clRed
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = Button1Click
+      ParentFont = False
+      TabOrder = 3
+    end
+    object ComboBox_arzt: TComboBox
+      Left = 64
+      Height = 23
+      Top = 56
+      Width = 128
+      ItemHeight = 15
+      OnChange = ComboBox_arztChange
+      OnKeyUp = ComboBox_arztKeyUp
+      OnSelect = ComboBox_arztSelect
+      TabOrder = 4
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 1704
+    Height = 171
+    Top = 800
+    Width = 185
+    Caption = 'GroupBox4'
+    ClientHeight = 151
+    ClientWidth = 181
+    TabOrder = 6
+    Visible = False
+    object Edit14: TEdit
+      Left = 44
+      Height = 23
+      Top = 14
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit14'
+    end
+    object Edit15: TEdit
+      Left = 44
+      Height = 23
+      Top = 42
+      Width = 80
+      TabOrder = 1
+      Text = 'Edit15'
+    end
+    object Edit16: TEdit
+      Left = 44
+      Height = 23
+      Top = 72
+      Width = 80
+      TabOrder = 2
+      Text = 'Edit16'
+    end
+    object Edit17: TEdit
+      Left = 44
+      Height = 23
+      Top = 102
+      Width = 80
+      TabOrder = 3
+      Text = 'Edit17'
+    end
+  end
+  object Label18: TLabel
+    Left = 906
+    Height = 15
+    Top = 139
+    Width = 110
+    Caption = 'Vorhandene Kunden:'
+    Font.Color = clMenu
+    ParentColor = False
+    ParentFont = False
+  end
+  object Shape3: TShape
+    Left = 0
+    Height = 104
+    Top = 0
+    Width = 1924
+    Brush.Color = 7361592
+    Brush.Style = bsImage
+    OnChangeBounds = Shape3ChangeBounds
+  end
+  object Image1: TImage
+    Left = 1441
+    Height = 64
+    Top = 8
+    Width = 64
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    OnClick = Image1Click
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869636E01000089504E47
+      0D0A1A0A0000000D494844520000004000000040040300000058476CED000000
+      0373424954080808DBE14FE00000000970485973000001BB000001BB013AECE3
+      E20000001974455874536F667477617265007777772E696E6B73636170652E6F
+      72679BEE3C1A00000027504C5445FFFFFF8A4824964E24AA5E287F4122975225
+      A25425AF6328C6853AD0D7DAE2A043E2E4E6F6B74EC12909950000000474524E
+      5300C0C0C072A2E524000000A949444154488963600002B634AC20810106E8A2
+      20BD1C0394515D01C4DAC4722823098702119802154C0520638B5DCAE10CAC0A
+      CC600ACCB02900990C5600618C2A18D90A8A610A8A712830832930C3AE20D105
+      0CCACB93A00C74052230052A38145037EBAD3973E614210567F02A287571E9A2
+      38772712CADD22A3B97B54C1A0CDDDDCBB77EFDE869CBB13E199371B28B501AE
+      009EBB45D01470CE9C39731AF68C9309949A40B902009BAE777E695918CE0000
+      000049454E44AE426082
+    }
+  end
+  object Image2: TImage
+    Left = 24
+    Height = 64
+    Top = 8
+    Width = 64
+    AutoSize = True
+    OnClick = Image2Click
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B47726170686963D706000089504E47
+      0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
+      0473424954080808087C0864880000000970485973000002200000022001EC56
+      F2770000001974455874536F667477617265007777772E696E6B73636170652E
+      6F72679BEE3C1A000006544944415478DADD9A7F6C535514C73B616E60940808
+      63AE2D0B9A88109748824A8C0A12E40F634C881A3126C608218EFE585C14932D
+      79DD04892C04E78FD0C1FABAB1D7CE421431CE089AE1B6BED631D776323232E7
+      86B0B8A8EBDE0ADB587F3DCF7D6B85D5B57D7D7DEFF6754DBEE992B5F79EF379
+      F79E73EEB955B02CAB9044DDC7D52117A90FBAC9B301377919DEC74113A081A0
+      8BFC29E4262BA7DDE67592CDCF53E20FDA655C024ED683589EFA8EF51C2B9A17
+      00021E727BD06DBE9A82F35131A037B317409771718A4F3DFE6AF8F5D8CAAC03
+      00867F2A82F333F298CF65158080C7B4050C0F8B06000401724F7600E8ABBF1B
+      0C1E12D3F91999AFB39EC662D90308BA4D46F19D8F6E05F23CCC91235F00BDC7
+      9782A141C90080FCEE868DB2050006BE2EA5F3480117B95FBE003CA4596A0020
+      A79C57C00F18005C932D004855173100F04B1D08D359010E0C00C6E41C03EA30
+      006893F316D0480EC0437E265B0090A29E911A008E9258F8977F6E58267D1D60
+      DA24F352981C9410C034EB6CBA47D600421EB35632002EF3E7F23F0D0E92F960
+      ECB004006EE26A93A53D40C8652E95E038FC49F67484FA6BF304F601E3698AED
+      AE2FCCAA96184A57229E008F6463533417F5FA45003080FA0CD9D9169FA90B06
+      D270DE97898B127107EC211F12180F6E04DCA6E7E6C9CDD08955418FF9420AF5
+      FE157F777DC9FCB91A43A26D8B026EB20A1D6713E57AEEB0E3695C91D57783CA
+      66FB7A75B3636DBC7BC2C8056953C86DEA0E784C97A0C23B097F57C44B758596
+      AEE530E636D90350B4B62E545BED152A0B3D0D625494636BBAC6A89A9C0FABAC
+      F4EF301E0BEFA78B29BB5A96008A9BDB4BC0C86ECED05B0AA8AD74390223644C
+      F8EE4E18633C66CC49D0FB0A82BD4316003618BB72C12003C81F63E8EDBAA4A4
+      68DE115D453937A82CF6F604E3B14A0BFD65E1375D8B330A20E2FCB94486C6E8
+      37D00178B29B94D68E4285CDB60006CA59D3685F31E334BD0FE4E23D1E457716
+      5B9C2B3306009E427D0ACECFA560245E08F96E18D4031074190180F6619ACE0B
+      D5080AB4523C79DE009456C72B912780D3F110727C35D99AFF9F2D04B19021F4
+      5BBC067D2943E8F67B09BD11DE3F1C336835A384763B5BABC9131D00DABF60CC
+      1466E77DAA26FAF9A80D5E42F7C818A16F1C23745E109B403EF86CF33851B651
+      140028F580317D989D1F40B5009AFF2FE2ED0270DC0C8E8592383E87B42799EA
+      BDC5690180A0F7224EE7D516FA7C918DE68EC2B0D41F0547AEA5EEF82C8DC2F6
+      D82C180018456304C044031D4368B681F113899CF3D5D5B013A71AD8EBA68F93
+      410840CC783565002A8BF349CC4B5F8FE6FDA75ABF168C66923DDDE92E3B8B5E
+      FEBE1E3E2BE1E66895FE891401D067303A7F1195CF570F972D0263FBF92CEF14
+      01208DF80E942EE305803B90604C7B6AAA637324DAEFE3BBBF050000E98FF002
+      A0A6E84A6C4F1F4E7C684E485D4BF92CFDF400E8A6E7CA0C732C7FC7B7F89EBE
+      E3352EF01974BB5289F00201B090152A7900A04771557BA8F981E684BC7D060B
+      0042D7991000E4E1FB3106BFDE99791539C9D29E8800C2DE83EF2D890B20D2E8
+      C005E04734A78F786779AA454E1A00582FA15D1F17008AC8F82A3F87F556AD3F
+      DB48361848AC708803C086C3493FCB1CAA9835362AB4E20280A8FC2C2E004A8A
+      A6B80C50A57BEC7F00447C8DD754C6AE821712A7418B7DC71CBD39F145D19D91
+      15A08A0580CADC440A0C5CE69C0B0EFF91F4B3CC07E5B3C68E3D2DC66B75AF99
+      A3E9297AFDCFCD67DC9D8B8213AE18304A688A781D861E6869C903238F4A0921
+      7A0002C35C98000CA3AC935247080AA397C1D84169E280FDA90800030E00A88B
+      24A827C87584ADF65D60F490B810ECB51C802A4D090E00B11940D8BD0045EF86
+      087E45240853AB6D9D059155704A62001DA2DD0CADB3F5DE89EA7870E00BD058
+      5ADBC0E2A8E1D261B5F64130D22F1580783D81F4DBCA70962FB2D04F83331FA1
+      F25600841B05B6B6FBB89468D0974A04A01ADBF5B8FA44DBAAD54D1D8FA39EA2
+      D2EAD8C35DA5596923ECF7AF61EBB4402C215556C741F85F19771F4839B6AAA8
+      F67B6FEB02D7257368F2FBAFD8C0503F3BD576964F1FE0746CE497FEF701E9C8
+      F6D202D4BC48B3211AED0E370D126FE4E3FF8184086208FD5BE0C4B840E72719
+      42FB6EE67E2122922227C5C3C821BE5D1FD84247FF26F61666F62732226BE450
+      F95D8C41B7237243740155745C8B8BD0FD09EFBFA01B21D0CED8B33E1FFD0B4E
+      17DBE98A1705A90000000049454E44AE426082
+    }
+  end
+  object Label19: TLabel
+    Left = 40
+    Height = 15
+    Top = 80
+    Width = 22
+    Caption = 'Neu'
+    Font.Color = clMenu
+    ParentColor = False
+    ParentFont = False
+  end
+  object Image3: TImage
+    Left = 136
+    Height = 64
+    Top = 8
+    Width = 64
+    AutoSize = True
+    OnClick = Image3Click
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B47726170686963070C000089504E47
+      0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
+      0473424954080808087C0864880000000970485973000001BB000001BB013AEC
+      E3E20000001974455874536F667477617265007777772E696E6B73636170652E
+      6F72679BEE3C1A00000B844944415478DADD5B795094E719B7B17152EB4CAE36
+      F9A3693B3D277F349DB6B69D4CA6339D8463B90F91A8A080C42808CA2DA7BAA2
+      0593A8ED186DB4CD05082A5E1C825764A9C2EEA2CB1E20101516F6E2865D44E4
+      129EBECFBBDFB76C60775D0E7717FF78D8E33BF6FBFDDEE77A9FE76109002C31
+      2561CE9CD8708EBB72B3BBC7E3080FCFC9484FCF0922FD44A4B13E9EE1E6AE5B
+      6C32E38B0857D7D7429DDD1AC25DDD818035294901BE10E7EFAB0A0AF27CF999
+      2320C489D34108300B1E2591109012E807F1FE3E5DCF1401612E6EC782DE7505
+      A2F2160988F5F3A604A0C4F9791F7F2608080C0C5C1AFC1EE7F106278E45F0C6
+      66800424ACF21D7B2608087375DF86ABBFD1D5BCFA6704AF82DA2FE2614F6820
+      44797941F26A3F2A5B3D3DDF59FC04B870A448006A40A88B1B15621240A200FC
+      333A18AAFE1D03ED45A9D0772D13DA4AB890BCC61FA2BDF5246CF7F1BE399B1F
+      95C93A7FC8AF53BD2594287D856255005FD2F64E8DACED173C5EEB0B76236083
+      33A71F094089F2F186CB07B782E25C0AB45F4881CE9274E8BDC2052D2F0B7495
+      D954A4275271E5290909FE3EBDE67E008109C5CA9D0289325F20550A04125517
+      790F16A49F084F2851C4548BE53FB71901EB9D38A308FEA3887574A51178D7C5
+      0CD056FCC3007ABAE4EEDC444920FE607CDA8D9F134A541E0289A28C80993003
+      14BF57F025CA16F23A629E10951809AC9635BFF65409087ED775120968CC4FA2
+      E051FAAFEF330B1E4594934C7DC38ED5BE9374B56BD4AF9207DE411E5C3E0D88
+      4C20561E242A1FC5AF55B9D548D5BF6D68685866FC202251FB8FAA25EA3F90F3
+      7C0452C56124E7BBF7503C4022D07C169C800F389C5758F567D5DE1A026E1C4B
+      A004A01F200FB7963CE8A0D1438F12C00542A9E26F737D38BEB4ED8F043897DC
+      4B65B8AF54D9C1972AB6F078F0FD052360A38BFBDF59029A4F275B4DC0C503D1
+      7A024838ACBAD5CC02C7874D17D6CB5F5FA855E2F3553F205A914C08D51A115C
+      895AB3200484733C2258026439890602FAAEEDB548C0C93D5B2801980F149DBB
+      0A7CA92A973CD4F2A7E5B06ED6295E263EE313027E9C21415E2D53FE6EDE0484
+      B9B8A7B104D070C710D07B658F45028E2785D1288004FC2B737F8EAD42175FAC
+      7062A20550B3237E637E26E0EA96CA12F09FA4500301DD65BB2C129016140031
+      BEFAB438D6DFC7A63B44E24C7F2D90AA9A0C11658E24303E80B38325603D91DB
+      9FC759F4037DD7B320376313557FB221A204C4F8FA86D83A8911895A5E244EB2
+      82D584B99803A301EE892C01AC1C8A0A024D511A4D828CC1DF3F9B0EE9C10133
+      F604D13E3EEBED91CA5212A634413E5BC748FF84BA7012A6138052F7DFED203F
+      BD0334C519A02ED90977F312A1FEAB580378D6FEA909F879AFB3573E4FCD61CA
+      2754CE2644B23E20CE1878E4C628C8BB2A845B27F6511250EA3F8F01F9C94468
+      BC74048E5F14404C508841FDF526E0B5C69E9B1AC631D2E88079C2ECA28013C7
+      8D057F60F72E28BCDD025FD7E92057D60BD5E5B9D05290089AF329505D590239
+      755A7AEC9CA0018E72D32878CC03E27C3DDEB2F7CE8E09913459B23663647667
+      BC374ACB4B65971BD570513106A56D639077678002452916DF87731285E1737E
+      E3203D0FE54A7D0B94149DBDCDE3F15EB237019827B0C912A6CD561150515B77
+      E252EBD0240B889522F908057BA2E1011410C0A7BE7D08B984949CFA0128691D
+      85E9E75F96EB262AC4D24C7B93801923BB77B06603B524AF5E07279B1ED2559F
+      0EAA989080DF9F6C1A84C2BB4350D2360AC526C0E3F7A81527EBFB1EDBDD0C30
+      6D66F60ED668C11256AD71A5A703638525C0D4B152023E973197BC7A2D384295
+      87D940D1ADB4D50450C7D63C6C12E4E9BB0FE1ECFD47268F2131ECF58E42807E
+      17A9DF343DA9A8B224BF5E3BC90228BC3764560BD8D5CE6F7C4057BCA069D0A0
+      1DECF5A7EA7B461DA5D6C7D613B0B26491009E48F466B9A4E9CB7271534E8544
+      724820BA99614E6E886F65E179AC5489F899DFD4D61DC1F797A58D9F95DFB8F1
+      638721405F54412DE0CDAA31F2AC08AD2C3135C6391380B6C46BE85EB15840F3
+      45AD6FB2A18F96D7183F605C6D16C8DAFE649C2459B2A143CC0D5A6D519D9DAF
+      DCAAD7FC9429B4EAF852D55F7153C41280956906D351BD5F5016582480A49207
+      A61535E555A2F69F393201586425CF798F01A8AD112BFFCC569BB1EF404CE253
+      168FB163349F4FA38895E37C8982B989B205597664128432F51BE4599B5912C8
+      33AB99ACB0CCA8BAFC91591F80078D4E2C6380AB8D8A91CDF8238E6E0A4CAF01
+      E8E2890DF543C4F2895927886A61B4F29F52B5D17F1E41753222E1DEF49ABEA3
+      099AEB8CDE04316B8B51001D0373F251B6A5C55E8C0E051D0B3A1874348E6E0A
+      340A10C78D0E9CC170E889611043038608F633860E433A49420ABD290931186A
+      164B58C4108EA17CCE7980A1CC348FB2B32D253030701997CB7D6E5E2332D308
+      E0E9ED4771D8D1C06E5EB9F2F9484F4FE7084FCFA3446A23BDBCBAC8671CE61A
+      23D212E9E19113EDF1E42A95E5B032E518158E46C0160FAF8D564CB28CC6F8F9
+      ACB7A415D638127D0879822DD95236F9F8BC8E237CD68CF2E82BD7BE55E648B0
+      625BA912337901D751080871E2687072C51A02B67AE97B97C9EFFB47CD890066
+      BA83767DB1DC646FF061EEEE6F07BFE76A00B8C5C3C3DA8936CD9C08C0D08705
+      46C61926DB9B805067CE052CDFE3FC121281EFF19598047C48B4823844485DEB
+      0F0723D6C299BD9BC7B2C2D74C30044C72C3C25E98533D80D502CC06B1F46C57
+      F577E608D91EC6365F6F28E47E00F2D349D051944ADB785D653BA1E7D26EC368
+      8F2437C5D0BC490A08F8CD9C08A0499254D9612E9FB6AD06B8C910FC66A2FA6A
+      669A05015BEA626786AC1E4702D256FB39CDB92284ED26C6178C631BCA8E041C
+      42020E4707193AD8C6D36BA6E448CC062D21E051AABFFFAB7326001B8ED87864
+      CB4CD890B45302B49CA8FEC4E95DE1561350B43F4AB537F4FD2FE75D1364AA2C
+      FA5D9654D584AD695B13D05ECA5DAE3E9F3CD956986435013A5EF6B8BA6C8F6C
+      418AA2388430350DA6A8B035090D85DC6504F4100BDE2A022AB31F6B2BB34B17
+      AC2ACC545C27584DB0B539B45F48BDDA5E9432693D01FBB5DACAACF8052D8B33
+      240C1A7C820D1D63436571604769C62C08C8CAEFE671572C785F803107B9213A
+      9010F934F3043A89AA6F788C6BCAB3AD9E67D4FE2F3BFCA9354618C758395571
+      556A31635CC8B4194B7024194B301E946CAABA78DFAA713E5E5673FFB5FD2F3E
+      D5CE1086489A2730C9D2D4C4A8823B9F5D2456A2F85265A651698BDE572855E1
+      40D6F7D4E7D3AA3003EC284E434F3F037CF7954CE82ECF9C7B4568B68219A33E
+      6D66F60E53A2A0AA4BFC06823235C985EA2DAC55FD9E4E998B95074D0C5C0F91
+      9DE96EE349D4BBB9F1879BBE8E83769C662B4D379842EF37FB4075219D648AC9
+      D07A81FB92CD7B83B881D213C16EA54DCA0896AF69095BAA1C36771E397E9BBC
+      A6F1A5AA9F18FF86A6E7D13A95A677A0F1CCC77488EBCE1731F06D4E3C347C15
+      077773E340733E19348233A0EA1AEA50768DFCCA6ECD512CAA3095259ED1289B
+      399924D2CD17ABAE0BC4AA6D26AACF4B75BAB195DA81B1D8CEDE917BEAEE47A0
+      EE1C986CB9F419DCCB8B87968204BAEAE81734A24B408F13E9D18D966B1F8C85
+      EA7423BFB47B7718ABCD5872C7BE03FEBB0CC92356096BD56F632D5F24123D3F
+      FDFC810178A57F703CBD7F70F40A0131480450FA07C60C0035DD8F26DB856799
+      A8900A9A861AC3B1F69E6160AFD1CBB8865C7B8ABCC7C8B0D4A1ABBCDDDDB0A2
+      473BAAFD2E8029E9EC1B360045699608A0ADA575D2F83B723D98BBBEAB7F54E0
+      D00474F68DC42288AEFE119300FA74A306A06DED0310B9350DB23F3E06C43FE8
+      3583BC9ABAAE9F4847AF9E3C8726A0BD7738830548C83009A69B9083D2D13D08
+      41C1D1B023653F358F2E727EAF6EE6EAE331340BF6BE8B8600BD3A8F9855E7E6
+      D64E08DEB01D62E2F6983DC794D92C2A02663AB42991DD9153023EDC926CF61C
+      63C7B92808E81818FA0BB1E309236F6F161CBFE60E25607D480C013A4AB5057D
+      8086210EC11BFB0C4A68EF70DFFF01E32499AB9F00E8190000000049454E44AE
+      426082
+    }
+  end
+  object Label20: TLabel
+    Left = 152
+    Height = 15
+    Top = 80
+    Width = 38
+    Caption = 'Update'
+    Font.Color = clMenu
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label21: TLabel
+    Left = 1464
+    Height = 15
+    Top = 80
+    Width = 19
+    Anchors = [akTop, akRight]
+    Caption = 'Exit'
+    Font.Color = clMenu
+    ParentColor = False
+    ParentFont = False
+  end
+  object ListView1: TListView
+    Left = 904
+    Height = 299
+    Top = 160
+    Width = 368
+    Columns = <    
+      item
+        Caption = 'KdID'
+      end    
+      item
+        Caption = 'Arzt'
+        Width = 300
+      end>
+    RowSelect = True
+    TabOrder = 7
+    ViewStyle = vsReport
+    OnColumnClick = ListView1ColumnClick
+    OnSelectItem = ListView1SelectItem
+  end
+  object Button_rename: TButton
+    Left = 1352
+    Height = 25
+    Top = 464
+    Width = 99
+    Caption = 'Button_rename'
+    OnClick = Button_renameClick
+    TabOrder = 8
+  end
+  object GroupBox5: TGroupBox
+    Left = 688
+    Height = 338
+    Top = 486
+    Width = 408
+    Caption = 'GroupBox5'
+    ClientHeight = 318
+    ClientWidth = 404
+    Color = 6908265
+    ParentColor = False
+    TabOrder = 9
+    object Button5: TButton
+      Left = 288
+      Height = 25
+      Top = 17
+      Width = 75
+      Caption = 'Button5'
+      OnClick = Button5Click
+      TabOrder = 0
+    end
+    object ListView2: TListView
+      Left = 16
+      Height = 283
+      Top = 19
+      Width = 264
+      Columns = <      
+        item
+          Caption = 'KdID'
+        end      
+        item
+          Caption = 'Arzt'
+          Width = 300
+        end>
+      RowSelect = True
+      TabOrder = 1
+      ViewStyle = vsReport
+      OnColumnClick = ListView1ColumnClick
+      OnSelectItem = ListView1SelectItem
+    end
+  end
+  object Button7: TButton
+    Left = 1152
+    Height = 25
+    Top = 504
+    Width = 75
+    Caption = 'Button7'
+    OnClick = Button7Click
+    TabOrder = 10
+  end
+  object Button8: TButton
+    Left = 1211
+    Height = 25
+    Top = 47
+    Width = 75
+    Caption = 'Button8'
+    OnClick = Button8Click
+    TabOrder = 11
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Params.Strings = (
+      'Port=8889'
+    )
+    Transaction = SQLTransaction1
+    Options = []
+    SkipLibraryVersionCheck = False
+    left = 88
+    top = 939
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 175
+    top = 939
+  end
+  object SQLScript1: TSQLScript
+    UseDollarString = False
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    left = 264
+    top = 939
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Options = []
+    left = 336
+    top = 939
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQLConnection1
+    Options = []
+    left = 424
+    top = 939
+  end
+  object DataSource1: TDataSource
+    left = 495
+    top = 939
+  end
+end

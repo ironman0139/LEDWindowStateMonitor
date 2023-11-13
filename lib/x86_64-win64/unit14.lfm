@@ -1,0 +1,586 @@
+object Settings: TSettings
+  Left = 409
+  Height = 661
+  Top = 153
+  Width = 1042
+  Caption = 'Settings'
+  ClientHeight = 661
+  ClientWidth = 1042
+  Color = 9803157
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Edit_number: TEdit
+    Left = 88
+    Height = 23
+    Top = 64
+    Width = 80
+    TabOrder = 0
+    Text = 'Edit_number'
+  end
+  object Button_save: TButton
+    Left = 32
+    Height = 25
+    Top = 592
+    Width = 75
+    Caption = 'Button_save'
+    OnClick = Button_saveClick
+    TabOrder = 1
+  end
+  object Edit_customerpath: TEdit
+    Left = 168
+    Height = 23
+    Top = 114
+    Width = 304
+    TabOrder = 2
+    Text = 'Edit_customerpath'
+  end
+  object Label_name: TLabel
+    Left = 32
+    Height = 15
+    Top = 40
+    Width = 35
+    Caption = 'Name:'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 72
+    Width = 51
+    Caption = 'Nummer:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 15
+    Top = 122
+    Width = 122
+    Caption = 'Pfad Patienverwaltung:'
+    ParentColor = False
+  end
+  object GroupBox_SQL: TGroupBox
+    Left = 584
+    Height = 189
+    Top = 24
+    Width = 222
+    Caption = 'SQL'
+    ClientHeight = 169
+    ClientWidth = 218
+    TabOrder = 3
+    object Edit_host: TEdit
+      Left = 87
+      Height = 23
+      Top = 7
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit_host'
+    end
+    object Edit_nameh: TEdit
+      Left = 87
+      Height = 23
+      Top = 40
+      Width = 80
+      TabOrder = 1
+      Text = 'Edit_nameh'
+    end
+    object Edit_pw: TEdit
+      Left = 87
+      Height = 23
+      Top = 72
+      Width = 80
+      TabOrder = 2
+      Text = 'Edit_pw'
+    end
+    object Edit_port: TEdit
+      Left = 87
+      Height = 23
+      Top = 104
+      Width = 80
+      TabOrder = 3
+      Text = 'Edit_port'
+    end
+    object Label3: TLabel
+      Left = 40
+      Height = 15
+      Top = 15
+      Width = 28
+      Caption = 'Host:'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 12
+      Height = 15
+      Top = 48
+      Width = 56
+      Caption = 'Username:'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 18
+      Height = 15
+      Top = 80
+      Width = 50
+      Caption = 'Passwort:'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 40
+      Height = 15
+      Top = 112
+      Width = 25
+      Caption = 'Port:'
+      ParentColor = False
+    end
+  end
+  object Edit_camerapath: TEdit
+    Left = 168
+    Height = 23
+    Top = 152
+    Width = 304
+    TabOrder = 4
+    Text = 'Edit_camerapath'
+  end
+  object Edit_user: TEdit
+    Left = 88
+    Height = 23
+    Top = 32
+    Width = 80
+    TabOrder = 5
+    Text = 'Edit_user'
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 15
+    Top = 160
+    Width = 138
+    Caption = 'Kamera Patienverwaltung:'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 36
+    Height = 15
+    Top = 552
+    Width = 61
+    Caption = 'Lizenzdatei:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 108
+    Height = 23
+    Top = 544
+    Width = 176
+    TabOrder = 6
+    Text = 'Edit1'
+  end
+  object Label9: TLabel
+    Left = 36
+    Height = 15
+    Top = 344
+    Width = 41
+    Caption = 'Startup:'
+    ParentColor = False
+  end
+  object ComboBox1: TComboBox
+    Left = 88
+    Height = 23
+    Top = 336
+    Width = 148
+    ItemHeight = 15
+    Items.Strings = (
+      'Auftragsverwaltung'
+      'Aufträge'
+      'Checkout Aufträge'
+      '3D Print'
+      '3D Print Aufträge'
+      'Checkout Aufträge'
+      'CNC'
+    )
+    TabOrder = 7
+    Text = 'ComboBox1'
+  end
+  object Label10: TLabel
+    Left = 82
+    Height = 15
+    Top = 198
+    Width = 72
+    Caption = 'Pfad Updater:'
+    ParentColor = False
+  end
+  object Edit_updater: TEdit
+    Left = 168
+    Height = 23
+    Top = 192
+    Width = 304
+    TabOrder = 8
+    Text = 'Edit_updater'
+  end
+  object Label11: TLabel
+    Left = 16
+    Height = 15
+    Top = 304
+    Width = 61
+    Caption = 'Archiv Jahr:'
+    ParentColor = False
+  end
+  object ComboBox_year: TComboBox
+    Left = 88
+    Height = 23
+    Top = 296
+    Width = 100
+    ItemHeight = 15
+    TabOrder = 9
+    Text = 'ComboBox_year'
+  end
+  object GroupBox1: TGroupBox
+    Left = 584
+    Height = 392
+    Top = 241
+    Width = 440
+    Caption = 'Arbeitsschalen'
+    ClientHeight = 372
+    ClientWidth = 436
+    TabOrder = 10
+    object ListView_pan: TListView
+      Left = 16
+      Height = 304
+      Top = 8
+      Width = 232
+      Columns = <      
+        item
+          Caption = 'Pan'
+        end      
+        item
+          Caption = 'RFID'
+          Width = 100
+        end      
+        item
+          Caption = 'AuftragNr'
+        end>
+      GridLines = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnSelectItem = ListView_panSelectItem
+    end
+    object Edit_pan: TEdit
+      Left = 248
+      Height = 23
+      Top = 24
+      Width = 80
+      TabOrder = 1
+      Text = 'Edit_pan'
+    end
+    object Edit_rfid: TEdit
+      Left = 336
+      Height = 23
+      Top = 24
+      Width = 80
+      OnChange = Edit_rfidChange
+      TabOrder = 2
+      Text = 'Edit_rfid'
+    end
+    object Button_pan_save: TButton
+      Left = 253
+      Height = 25
+      Top = 72
+      Width = 75
+      Caption = 'Speichern'
+      OnClick = Button_pan_saveClick
+      TabOrder = 3
+    end
+    object Button_update: TButton
+      Left = 18
+      Height = 25
+      Top = 320
+      Width = 75
+      Caption = 'Anzeigen'
+      OnClick = Button_updateClick
+      TabOrder = 4
+    end
+    object Label12: TLabel
+      Left = 248
+      Height = 15
+      Top = 0
+      Width = 68
+      Caption = 'Arbeitschale:'
+      ParentColor = False
+    end
+    object Label13: TLabel
+      Left = 336
+      Height = 15
+      Top = 0
+      Width = 27
+      Caption = 'RFID:'
+      ParentColor = False
+    end
+    object Button_delete: TButton
+      Left = 173
+      Height = 25
+      Top = 320
+      Width = 75
+      Caption = 'Button_delete'
+      OnClick = Button_deleteClick
+      TabOrder = 5
+    end
+    object Button_clear: TButton
+      Left = 253
+      Height = 25
+      Top = 104
+      Width = 75
+      Caption = 'Button_clear'
+      OnClick = Button_clearClick
+      TabOrder = 6
+    end
+    object Button3: TButton
+      Left = 336
+      Height = 25
+      Top = 72
+      Width = 96
+      Caption = 'Speichern und Neu'
+      Font.CharSet = SHIFTJIS_CHARSET
+      Font.Height = -11
+      Font.Name = '@Arial Unicode MS'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = Button3Click
+      ParentFont = False
+      TabOrder = 7
+    end
+  end
+  object Label14: TLabel
+    Left = 32
+    Height = 15
+    Top = 400
+    Width = 44
+    Caption = 'Drucker:'
+    ParentColor = False
+  end
+  object Label15: TLabel
+    Left = 46
+    Height = 15
+    Top = 424
+    Width = 30
+    Caption = 'Main:'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    Left = 45
+    Height = 15
+    Top = 448
+    Width = 31
+    Caption = 'Label:'
+    ParentColor = False
+  end
+  object ComboBox2: TComboBox
+    Left = 88
+    Height = 23
+    Top = 416
+    Width = 136
+    ItemHeight = 15
+    OnChange = ComboBox2Change
+    TabOrder = 11
+    Text = 'ComboBox2'
+  end
+  object ComboBox3: TComboBox
+    Left = 88
+    Height = 23
+    Top = 440
+    Width = 136
+    ItemHeight = 15
+    OnChange = ComboBox3Change
+    TabOrder = 12
+    Text = 'ComboBox3'
+  end
+  object Edit2: TEdit
+    Left = 240
+    Height = 23
+    Top = 416
+    Width = 128
+    TabOrder = 13
+    Text = 'Edit2'
+  end
+  object Edit3: TEdit
+    Left = 240
+    Height = 23
+    Top = 440
+    Width = 128
+    TabOrder = 14
+    Text = 'Edit3'
+  end
+  object Label17: TLabel
+    Left = 22
+    Height = 15
+    Top = 472
+    Width = 54
+    Caption = 'Laufzettel:'
+    ParentColor = False
+  end
+  object ComboBox4: TComboBox
+    Left = 88
+    Height = 23
+    Top = 464
+    Width = 136
+    ItemHeight = 15
+    OnChange = ComboBox3Change
+    TabOrder = 15
+    Text = 'ComboBox4'
+  end
+  object Edit4: TEdit
+    Left = 240
+    Height = 23
+    Top = 464
+    Width = 128
+    TabOrder = 16
+    Text = 'Edit4'
+  end
+  object Label18: TLabel
+    Left = 59
+    Height = 15
+    Top = 496
+    Width = 17
+    Caption = 'A4:'
+    ParentColor = False
+  end
+  object ComboBox5: TComboBox
+    Left = 88
+    Height = 23
+    Top = 488
+    Width = 136
+    ItemHeight = 15
+    OnChange = ComboBox3Change
+    TabOrder = 17
+    Text = 'ComboBox5'
+  end
+  object Edit5: TEdit
+    Left = 239
+    Height = 23
+    Top = 488
+    Width = 129
+    TabOrder = 18
+    Text = 'Edit5'
+  end
+  object GroupBox2: TGroupBox
+    Left = 816
+    Height = 190
+    Top = 24
+    Width = 185
+    Caption = '3D Print Auftrag Nr ändern'
+    ClientHeight = 170
+    ClientWidth = 181
+    TabOrder = 19
+    object Edit6: TEdit
+      Left = 64
+      Height = 23
+      Top = 0
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit6'
+    end
+    object Label19: TLabel
+      Left = 16
+      Height = 15
+      Top = 8
+      Width = 40
+      Caption = 'Aktuell:'
+      ParentColor = False
+    end
+    object Edit7: TEdit
+      Left = 64
+      Height = 23
+      Top = 40
+      Width = 80
+      TabOrder = 1
+    end
+    object Label20: TLabel
+      Left = 31
+      Height = 15
+      Top = 48
+      Width = 25
+      Caption = 'Neu:'
+      ParentColor = False
+    end
+    object Button2: TButton
+      Left = 16
+      Height = 25
+      Top = 96
+      Width = 75
+      Caption = 'Button2'
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+  end
+  object Edit8: TEdit
+    Left = 430
+    Height = 23
+    Top = 32
+    Width = 80
+    TabOrder = 20
+    Text = 'Edit8'
+  end
+  object Button1: TButton
+    Left = 420
+    Height = 25
+    Top = 60
+    Width = 100
+    Caption = 'Versionsnummer'
+    OnClick = Button1Click
+    TabOrder = 21
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 144
+    top = 607
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQLConnection1
+    Options = []
+    left = 200
+    top = 607
+  end
+  object SQLScript1: TSQLScript
+    UseDollarString = False
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    left = 256
+    top = 608
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Options = []
+    left = 312
+    top = 608
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    Options = []
+    SkipLibraryVersionCheck = False
+    left = 368
+    top = 608
+  end
+end

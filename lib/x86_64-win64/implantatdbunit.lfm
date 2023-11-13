@@ -1,0 +1,334 @@
+object ImplantatDBForm: TImplantatDBForm
+  Left = 384
+  Height = 858
+  Top = 25
+  Width = 1396
+  Caption = 'ImplantatDBForm'
+  ClientHeight = 858
+  ClientWidth = 1396
+  Color = 9803157
+  OnCreate = FormCreate
+  SessionProperties = 'Left;Top;Height;Width'
+  LCLVersion = '1.6.4.0'
+  object TreeView1: TTreeView
+    Left = 30
+    Height = 711
+    Top = 110
+    Width = 200
+    Anchors = [akTop, akLeft, akBottom]
+    Color = clMedGray
+    DefaultItemHeight = 18
+    Images = ImageList1
+    TabOrder = 0
+    OnSelectionChanged = TreeView1SelectionChanged
+  end
+  object Memo1: TMemo
+    Left = 235
+    Height = 710
+    Top = 110
+    Width = 759
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 1001
+    Height = 34
+    Top = 785
+    Width = 88
+    Anchors = [akRight, akBottom]
+    Caption = 'Speichern'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Shape3: TShape
+    Left = 0
+    Height = 70
+    Top = 0
+    Width = 1433
+    Anchors = [akTop, akLeft, akRight]
+    Brush.Color = clTeal
+    Brush.Style = bsImage
+    Pen.Color = 7361592
+  end
+  object Image1: TImage
+    Left = 25
+    Height = 32
+    Top = 15
+    Width = 32
+    AutoSize = True
+    OnClick = Image1Click
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869639103000089504E47
+      0D0A1A0A0000000D4948445200000020000000200806000000737A7AF4000000
+      0473424954080808087C0864880000000970485973000000B1000000B101C62D
+      498D0000001974455874536F667477617265007777772E696E6B73636170652E
+      6F72679BEE3C1A0000030E494441545885ED974D68545714C77FE77DE4CDBC4C
+      9A98013508558851448C46344184402D6A2BA550BB28EE442AB871E3420517A2
+      0B9BDA45411BEA07AD580537952C940A424D456CADA05657BA10438AC62886A8
+      319999F7DE3D5D8C268D1966DEA81311FCC359BC7B0FE7FE38E79EFBEE455589
+      6333EAADEF132E01A071CD75E419D05A2CAEA82AA52422537D8F7B7FFEE8D91F
+      4E2BE94ED81B71A42B64EF65271A1E314F47B2A645557B0AF93AA5C30150EF7B
+      D0DC28B19C431F6AAA60C97C3FBB7C694DAAE3605FB788B4A8EAE0CBBE564C80
+      F224600918033B3635385FAE9C323DE5DB6744C49D1C00C01630CFAB7B78CFAC
+      C4C279C9E6EAA4F5CBE40158608C01C0758453079AFCA969F7F3A467EFAE3880
+      3882E7C0E0D388C127795385933F34FA8EC33611F9E2856FDC4D5896EC1936AB
+      5643C7E56C22DD7AEDE5E92AD76605D055310080F41C9BEBC7EC71190E6E85EC
+      3A1EF2DDC5B1B18AED81B87A0FF01E202EC0C3F6F9D670250062B5A1AA3E8ABA
+      BC0740CD9B06289A0111A99244EA8A88A8B336D7E87C94654B67387900C072A9
+      6B68B67EBE8BDB799BBAAF4EB0EFD788E00D32942A8147222554D7A2AE8FE5D7
+      638C121998F05F7D45BD335D50318D9640441A48D4EC14AF7AF6E8985F97C6B6
+      0150114C2201227CB6AB1A11C195009790B6B939B6AEB371ECD7002099DA2E4D
+      CB36D2BA665C56644E5B1EC075186C5F8C7C7092EE87BDF9B9C890ECE9E342D7
+      4FB4340DF1695BA9842A9ABF338FDE84C732E0F8B368F9D892955F170D218B56
+      8DFB76AFDEC2FAF71CFD0337B8D9AB1C3D13155E3A52C2FB1187FE261718FE98
+      00F03A1ACAC8D0868E60337009585FC455818BC06F1300341CEE916BBF1B75BD
+      892598B9602CC23F67E17F25087AFA0807EE18A05F556F02DBCB811F7D9814DA
+      84049934D31B17C837E76D09426AFFBAC140673B523BAD1BC410E642826CA0E1
+      C8258CF95655CB3EA2C632A0DA076C1A4727F28944D1E9E7A458994CDEF771FF
+      1A55CD94BB5821BDF573E0AD0394EA821C9921E5D963642483191E0011836AE1
+      5E7B15157B3A031E55FE755E3CB94522B0F6C77DD2C7B1FF00B64B946861535D
+      D40000000049454E44AE426082
+    }
+  end
+  object Panel1: TPanel
+    Left = 1019
+    Height = 145
+    Top = 110
+    Width = 320
+    Anchors = [akTop, akRight]
+    BevelOuter = bvNone
+    ClientHeight = 145
+    ClientWidth = 320
+    Color = 6908265
+    Enabled = False
+    ParentColor = False
+    TabOrder = 3
+    object ComboBox1: TComboBox
+      Left = 90
+      Height = 23
+      Top = 35
+      Width = 215
+      ItemHeight = 15
+      TabOrder = 0
+      Text = 'ComboBox1'
+    end
+    object Label1: TLabel
+      Left = 28
+      Height = 15
+      Top = 43
+      Width = 53
+      Caption = 'Hersteller:'
+      Font.Color = clWhite
+      ParentColor = False
+      ParentFont = False
+    end
+    object Button2: TButton
+      Left = 230
+      Height = 25
+      Top = 85
+      Width = 75
+      Caption = 'Erstellen'
+      OnClick = Button3Click
+      TabOrder = 1
+    end
+    object Label5: TLabel
+      Left = 125
+      Height = 15
+      Top = 5
+      Width = 53
+      Caption = 'Hersteller:'
+      Font.Color = clWhite
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Panel2: TPanel
+    Left = 1019
+    Height = 150
+    Top = 270
+    Width = 320
+    Anchors = [akTop, akRight]
+    BevelOuter = bvNone
+    ClientHeight = 150
+    ClientWidth = 320
+    Color = 6908265
+    ParentColor = False
+    TabOrder = 4
+    object ComboBox2: TComboBox
+      Left = 90
+      Height = 23
+      Top = 30
+      Width = 215
+      ItemHeight = 15
+      TabOrder = 0
+      Text = 'ComboBox2'
+    end
+    object Label3: TLabel
+      Left = 25
+      Height = 15
+      Top = 35
+      Width = 53
+      Caption = 'Hersteller:'
+      Font.Color = clWhite
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit2: TEdit
+      Left = 90
+      Height = 23
+      Top = 70
+      Width = 215
+      TabOrder = 1
+      Text = 'Edit2'
+    end
+    object Label4: TLabel
+      Left = 10
+      Height = 15
+      Top = 78
+      Width = 71
+      Caption = 'Implantattyp:'
+      Font.Color = clWhite
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 120
+      Height = 15
+      Top = 5
+      Width = 71
+      Caption = 'Implantattyp:'
+      Font.Color = clWhite
+      ParentColor = False
+      ParentFont = False
+    end
+    object Button3: TButton
+      Left = 230
+      Height = 25
+      Top = 115
+      Width = 75
+      Caption = 'Button3'
+      OnClick = Button3Click
+      TabOrder = 2
+    end
+    object Button6: TButton
+      Left = 230
+      Height = 25
+      Top = 115
+      Width = 75
+      Caption = 'Erstellen'
+      OnClick = Button6Click
+      TabOrder = 3
+    end
+  end
+  object Button4: TButton
+    Left = 1039
+    Height = 25
+    Top = 385
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Löschen'
+    OnClick = Button4Click
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 95
+    Height = 25
+    Top = 20
+    Width = 75
+    Caption = 'Update'
+    OnClick = Button5Click
+    TabOrder = 6
+  end
+  object ImageList1: TImageList
+    left = 845
+    top = 775
+    Bitmap = {
+      4C69010000001000000010000000000000CE000000FF000000FF000000FF0000
+      00FF0000009CFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF000000006E000000FF0000007000000040000000400000
+      004000000018FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00000000A0000000FF00000040FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00000000A0000000FF00000040FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0000000046040805E8000000FF00000040FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0025050A07BA010202FE0D1612FF0000009C00000018FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000E0204028C0203
+      03FD243F35FE7AD0B3FF375E50FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF000000000200000062040906F2111F19FE64AB
+      93FF93FBD8FF93FBD8FF416F60FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF000000003B060C08D7050A08FE4E8572FF8FF4D2FF93FB
+      D8FF93FBD8FF93FBD8FF8EF3D1FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF000000001D040906AE010101FF365D4FFF85E2C3FF93FBD8FF93FBD8FF93FB
+      D8FF93FBD8FF8FF4D2FF6FBDA3FFFFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0033020503FA13211CFF74C7ABFF93FBD8FF93FBD8FF93FBD8FF93FBD8FF5896
+      81FF2B4039FF060807FF090A09FFFFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      0060010201FF000101FF345A4CFF84E1C2FF93FBD8FF91F8D5FF3F6659FF090B
+      0AFF8A8A8AFFD4D4D4FFFCFCFCFFFFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      00600A1911FD42AE7AFF122B1EFF060B09FF4D8472FF2E4B41FF2F3231FFDCDC
+      DCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      00600A1911FD57E5A0FF56E39FFF348960FF060E0AFF090B0AFFDCDCDCFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      004E0F291BFB57E5A0FF57E5A0FF57E5A0FF15291FFF8A8A8AFFD5D5D5FF0606
+      06FF000000FF4C4C4CFFFFFFFFFFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF0050D28AED57E5A0FF57E5A0FF53D998FF010202FFD4D4D4FFFFFFFFFF5454
+      54FF000000FFA8A8A8FFFFFFFFFF000000000000001100000054000000370000
+      0021307F54F357E5A0FF57E5A0FF40A976FF080A09FFFCFCFCFFFDFDFDFF1A1A
+      1AFF000000FF222222FFDCDCDCFF
+    }
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 970
+    top = 775
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    AfterConnect = MySQLConnection1AfterConnect
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    Options = []
+    SkipLibraryVersionCheck = False
+    left = 910
+    top = 775
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQLConnection1
+    Options = []
+    left = 1040
+    top = 775
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Options = []
+    left = 845
+    top = 830
+  end
+  object SQLQuery2: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 970
+    top = 825
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    FileName = 'sessionImplantatDBForm'
+    left = 910
+    top = 830
+  end
+end

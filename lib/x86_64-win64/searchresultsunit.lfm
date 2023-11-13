@@ -1,0 +1,55 @@
+object SearchResultsForm: TSearchResultsForm
+  Left = 656
+  Height = 300
+  Top = 273
+  Width = 619
+  Caption = 'SearchResultsUnit'
+  ClientHeight = 300
+  ClientWidth = 619
+  Color = 9803157
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  SessionProperties = 'Width;Top;Height;Left'
+  LCLVersion = '1.6.4.0'
+  object Button1: TButton
+    Left = 490
+    Height = 25
+    Top = 250
+    Width = 75
+    Caption = 'Auswählen'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object ListView1: TListView
+    Left = 25
+    Height = 256
+    Top = 20
+    Width = 450
+    AutoWidthLastColumn = True
+    Columns = <    
+      item
+        Caption = 'Arzt'
+        Width = 300
+      end    
+      item
+        Caption = 'ID'
+        Width = 60
+      end>
+    GridLines = True
+    ReadOnly = True
+    RowSelect = True
+    ScrollBars = ssVertical
+    SortColumn = 1
+    SortDirection = sdDescending
+    SortType = stBoth
+    TabOrder = 1
+    ViewStyle = vsReport
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    FileName = 'sessionSearchUnit.xml'
+    OnRestoreProperties = XMLPropStorage1RestoreProperties
+    left = 515
+    top = 200
+  end
+end

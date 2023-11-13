@@ -1,0 +1,111 @@
+object Form14: TForm14
+  Left = 395
+  Height = 848
+  Top = 112
+  Width = 1395
+  Caption = 'Calendar'
+  ClientHeight = 848
+  ClientWidth = 1395
+  Color = 9803157
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 816
+    Top = 0
+    Width = 1376
+    ActivePage = TabSheet2
+    TabIndex = 1
+    TabOrder = 0
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'Woche'
+      ClientHeight = 788
+      ClientWidth = 1368
+      object VpWeekView1: TVpWeekView
+        Left = -4
+        Height = 784
+        Top = 0
+        Width = 984
+        Color = clWindow
+        AllDayEventAttributes.BackgroundColor = clWindow
+        AllDayEventAttributes.EventBorderColor = clGray
+        AllDayEventAttributes.EventBackgroundColor = clBtnFace
+        DateLabelFormat = 'dddd, mmmm dd, yyyy'
+        DayHeadAttributes.Color = clBtnFace
+        DayHeadAttributes.DateFormat = 'dddd mmmm, dd'
+        DayHeadAttributes.Font.Height = -13
+        DayHeadAttributes.Bordered = True
+        DrawingStyle = ds3d
+        HeadAttributes.Color = clBtnFace
+        LineColor = clGray
+        TimeFormat = tf12Hour
+        ShowEventTime = True
+        WeekStartsOn = dtMonday
+        TabStop = True
+        TabOrder = 0
+        AfterEdit = VpWeekView1AfterEdit
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Monat'
+      ClientHeight = 788
+      ClientWidth = 1368
+      object VpMonthView1: TVpMonthView
+        Left = 0
+        Height = 793
+        Top = 0
+        Width = 1376
+        Color = clWindow
+        AfterEnter = VpMonthView1AfterEnter
+        TabStop = True
+        TabOrder = 0
+        KBNavigation = True
+        DateLabelFormat = 'mmmm yyyy'
+        DayHeadAttributes.Color = clBtnFace
+        DayNameStyle = dsShort
+        DrawingStyle = ds3d
+        EventDayStyle = []
+        HeadAttributes.Color = clBtnFace
+        SelectedDayColor = clRed
+        ShowEvents = True
+        ShowEventTime = False
+        TimeFormat = tf12Hour
+        TodayAttributes.Color = clBtnFace
+        TodayAttributes.BorderPen.Color = clRed
+        TodayAttributes.BorderPen.Width = 3
+        WeekStartsOn = dtSunday
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'TabSheet3'
+      ClientHeight = 788
+      ClientWidth = 1368
+      object VpTaskList1: TVpTaskList
+        Left = 0
+        Height = 792
+        Top = 0
+        Width = 1368
+        Color = clWindow
+        TabStop = True
+        TabOrder = 0
+        ReadOnly = False
+        DisplayOptions.CheckBGColor = clWindow
+        DisplayOptions.CheckColor = cl3DDkShadow
+        DisplayOptions.CheckStyle = csCheck
+        DisplayOptions.DueDateFormat = 'dd.MM.yyyy'
+        DisplayOptions.ShowCompletedTasks = False
+        DisplayOptions.ShowAll = False
+        DisplayOptions.ShowDueDate = True
+        DisplayOptions.OverdueColor = clRed
+        DisplayOptions.NormalColor = clBlack
+        DisplayOptions.CompletedColor = clGray
+        LineColor = clGray
+        MaxVisibleTasks = 250
+        TaskHeadAttributes.Color = clSilver
+        DrawingStyle = ds3d
+        ShowResourceName = True
+      end
+    end
+  end
+end

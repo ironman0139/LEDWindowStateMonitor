@@ -1,0 +1,381 @@
+object Form17: TForm17
+  Left = 374
+  Height = 831
+  Top = 18
+  Width = 1002
+  Caption = 'Ordner erstellen'
+  ClientHeight = 831
+  ClientWidth = 1002
+  Color = 9803157
+  Font.Color = clInfoText
+  OnCreate = FormCreate
+  ShowInTaskBar = stAlways
+  LCLVersion = '1.6.4.0'
+  object Shape1: TShape
+    Left = 0
+    Height = 57
+    Top = 0
+    Width = 1008
+    Brush.Color = clGrayText
+  end
+  object Edit6: TEdit
+    Left = 496
+    Height = 23
+    Top = 88
+    Width = 208
+    Color = clMenuHighlight
+    Font.Color = clWindowText
+    OnKeyUp = Edit6KeyUp
+    ParentFont = False
+    TabOrder = 0
+    Text = 'Edit6'
+  end
+  object Label2: TLabel
+    Left = 207
+    Height = 15
+    Top = 104
+    Width = 34
+    Caption = 'Label2'
+    ParentColor = False
+    Visible = False
+  end
+  object Label4: TLabel
+    Left = 207
+    Height = 15
+    Top = 145
+    Width = 34
+    Caption = 'Label4'
+    ParentColor = False
+    Visible = False
+  end
+  object ListView1: TListView
+    Left = 496
+    Height = 232
+    Top = 120
+    Width = 264
+    Columns = <    
+      item
+        Caption = 'KdId'
+      end    
+      item
+        Caption = 'Arzt'
+        Width = 200
+      end>
+    Font.Style = [fsBold]
+    GridLines = True
+    ParentFont = False
+    RowSelect = True
+    TabOrder = 1
+    ViewStyle = vsReport
+    OnSelectItem = ListView1SelectItem
+  end
+  object Label1: TLabel
+    Left = 496
+    Height = 20
+    Top = 64
+    Width = 45
+    Caption = 'Suche:'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Color = clHighlight
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 24
+    Height = 280
+    Top = 72
+    Width = 433
+    Caption = 'Erstellen'
+    ClientHeight = 260
+    ClientWidth = 429
+    Color = clGrayText
+    Font.Color = clCaptionText
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object Edit_pan: TEdit
+      Left = 24
+      Height = 23
+      Top = 24
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit_pan'
+    end
+    object Button1: TButton
+      Left = 24
+      Height = 25
+      Top = 208
+      Width = 75
+      Caption = 'Erstellen'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Edit8: TEdit
+      Left = 24
+      Height = 23
+      Top = 88
+      Width = 184
+      ReadOnly = True
+      TabOrder = 2
+      Text = 'Edit8'
+    end
+    object Edit1: TEdit
+      Left = 24
+      Height = 23
+      Top = 152
+      Width = 184
+      TabOrder = 3
+      Text = 'Edit1'
+    end
+    object Label5: TLabel
+      Left = 24
+      Height = 15
+      Top = 8
+      Width = 73
+      Caption = 'Arbeitsschale:'
+      Font.Color = clHighlightText
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 24
+      Height = 15
+      Top = 72
+      Width = 49
+      Caption = 'Zahnarzt:'
+      Font.Color = clHighlightText
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 24
+      Height = 15
+      Top = 136
+      Width = 40
+      Caption = 'Patient:'
+      Font.Color = clHighlightText
+      ParentColor = False
+      ParentFont = False
+    end
+    object Button2: TButton
+      Left = 120
+      Height = 25
+      Top = 208
+      Width = 75
+      Caption = 'Update'
+      OnClick = Button2Click
+      TabOrder = 4
+      Visible = False
+    end
+    object Edit7: TEdit
+      Left = 255
+      Height = 23
+      Top = 24
+      Width = 80
+      TabOrder = 5
+      Text = 'Edit7'
+    end
+    object Label3: TLabel
+      Left = 264
+      Height = 15
+      Top = 8
+      Width = 61
+      Caption = 'AuftragsNr.'
+      Font.Color = clHighlightText
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit3: TEdit
+      Left = 232
+      Height = 23
+      Top = 88
+      Width = 80
+      OnChange = Edit3Change
+      ReadOnly = True
+      TabOrder = 6
+      Text = 'Edit3'
+    end
+    object Label10: TLabel
+      Left = 232
+      Height = 15
+      Top = 72
+      Width = 90
+      Caption = 'Kundennummer:'
+      Font.Color = clHighlightText
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Calendar1: TCalendar
+    Left = 792
+    Height = 160
+    Top = 120
+    Width = 176
+    DateTime = 43899
+    OnChange = Calendar1Change
+    TabOrder = 3
+  end
+  object Label8: TLabel
+    Left = 792
+    Height = 17
+    Top = 94
+    Width = 60
+    Caption = 'OP Termin'
+    Color = clRed
+    Font.Color = clWhite
+    Font.Height = -13
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Edit2: TEdit
+    Left = 792
+    Height = 23
+    Top = 296
+    Width = 80
+    ReadOnly = True
+    TabOrder = 4
+    Text = 'Edit2'
+  end
+  object GroupBox2: TGroupBox
+    Left = 24
+    Height = 313
+    Top = 376
+    Width = 529
+    Caption = 'Datensätze vorhanden'
+    ClientHeight = 293
+    ClientWidth = 525
+    Color = clGrayText
+    Font.Color = clCaptionText
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 5
+    Visible = False
+    object ListView2: TListView
+      Left = 32
+      Height = 240
+      Top = 32
+      Width = 480
+      Columns = <      
+        item
+          Caption = 'ID'
+        end      
+        item
+          Caption = 'Arzt'
+          Width = 150
+        end      
+        item
+          Caption = 'Patient'
+          Width = 200
+        end      
+        item
+          Caption = 'Box'
+        end>
+      Font.Style = [fsBold]
+      GridLines = True
+      ParentFont = False
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnSelectItem = ListView2SelectItem
+    end
+  end
+  object Image1: TImage
+    Left = 32
+    Height = 32
+    Top = 8
+    Width = 32
+    AutoSize = True
+    OnClick = Image1Click
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869632405000089504E47
+      0D0A1A0A0000000D494844520000002000000020080300000044A48AC6000000
+      0373424954080808DBE14FE00000000970485973000007E9000007E901947A3C
+      400000001974455874536F667477617265007777772E696E6B73636170652E6F
+      72679BEE3C1A0000027C504C5445FFFFFF8080FF5555AA55AAAA40406060809F
+      718E8E809999748BA277BB884747636DC28674C58B72C184464D644A515E6283
+      9D46536070C1896FC587697B9F43516045505F71C38745516072C387717DA646
+      526155617B6F7EA45961816D7EA3525A76444F5F4451607592B17792B06E7EA5
+      54607B7080A659648144515F6E7DA3535C7870C28643505E71C48653776E71C3
+      867894B371C3867B99B871C3867B99BA7893B47C9BBB71C3857C9ABB71C2867C
+      9BBB7C9BBB414D5A71C386414D5A71C38670C38681A2C381A2C43F4B583E4B58
+      71C38671C38584A5C884A5C93E4A5784A6C984A6CA71C38686A9CE86AACD71C3
+      868AAED38AAFD48AB0D571C38671C28639465171C3868DB4D98DB4DA8EB4DA38
+      454F3948503B48543C4D523D4A57404B5A414D5D434F5F46526447536647665D
+      4954694955694A566B4B566C4C67684F7765515C77525D78527F68545F7C545F
+      7E55608056628056638056886C576282576283576383586383586A815B67885D
+      698A5D7C825E81825F8382606C8E608882636F93639083647094649783667297
+      667398669D8467739867AC7C68A2846A779D6C799F6CB2846D7AA16D7BA26F7E
+      A66FBC86707FA870BE8670C285717FA871C38673C48874C4897B8BB87C8BBA7C
+      8CBB7C8EBA7C8FBA7C90B97C90BA7C92BB7D8DBC7D8EBB7D8EBC7D95BD7E96BE
+      7EC9917F8FBE7F90BF7F97BF7F99C07F99C17FC9928091C1809BC38192C28192
+      C3819DC38292C38292C48293C58393C683CB968596CA8697CA8697CB86A6CD88
+      A9D08ACD9B8DB2D88DB2D98EB6DC8EB6DD8FB6DD90B7DE90B8DF90B9DF90B9E0
+      91BAE195D2A49CD5ABABDBB7AFDDBBBFE4C8C3E6CCD3ECDAD7EEDDE1F3E6E3F3
+      E7F2FAF4F8FCF9FCFEFC014FE4200000005B74524E53000203030808090A0B0F
+      1215161D21262728293538454651555556575757595B5D616262676F70707374
+      7475767D858D919B9C9EA2A2A3A6AEB3B5B5B7C3C4D5D5DCE0E1E4E5EAEBECEC
+      EEEEEFF1F4F5F8FAFAFBFCFDFEFEFEFEFE7229E4BD000001B34944415438CB63
+      60000336654B270FBFC0C8235141FE9ECE362A1C0CC880D5D87BFF315470C0C7
+      941D26CD6818740C1B0836638228303F860B5883E50522702AD82F025220B50B
+      A782DDAA2005B28B0FE2903FB4481DAC60E786A587B1481F5DB97E2754C1CE9D
+      6BE7AFDB8B22BB6FE3FCB54071B80210583167FE8225AB36AE5EB260DEDCE53B
+      2062280AB001B002793C0AB4400AE466E2945FA801522053B50987FCD66A35B0
+      82C2B29ECD58A4B7F455144215141696B64E9AB51D4972FBECA96DE54071B802
+      1028AD6FECE8EE9FD0DFDDD15C5F0E154351800D8015286093A9AC6BE96AAA29
+      D2062990CEC5946F983C0D047AF5C10AE2F3D1E5DBA74141A838484174740AAA
+      925A90DC9AD320D29D07AC203A3A3123A700265F3C112475FC22D80C23A80210
+      884D484A4ECB4C4FCE9A86A4C01149010C644F9BB6EDD4A933974E9D3A397D5A
+      38278318BA82BC69D34E9C3B77FEF2B97367974D9BC6CBC0608FA62015D90A37
+      A037B85C5115C44D41526005CE1A122E282A4A40327B2E80C8106168F6E3D3B5
+      F50A832988E904C9CD00117A287998855F545153494C9085DB021290013ACC0C
+      3880A48983AF9D8110880900ADD4E5BE27CE54300000000049454E44AE426082
+    }
+  end
+  object Label9: TLabel
+    Left = 36
+    Height = 15
+    Top = 40
+    Width = 22
+    Caption = 'Neu'
+    Font.Color = clHighlightText
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 792
+    Height = 15
+    Top = 337
+    Width = 40
+    Caption = 'Label11'
+    ParentColor = False
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    Options = []
+    SkipLibraryVersionCheck = False
+    left = 16
+    top = 776
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 72
+    top = 776
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQLConnection1
+    Options = []
+    left = 128
+    top = 776
+  end
+end
