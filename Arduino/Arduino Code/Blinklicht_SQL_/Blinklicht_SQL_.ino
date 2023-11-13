@@ -1,4 +1,4 @@
-// Tim Eisenmann LEDWindowStateMonitor v0.06
+// Tim Eisenmann v0.08
 
 #include <Adafruit_NeoPixel.h>
 
@@ -16,13 +16,16 @@ void setup() {
   Serial.begin(9600); // Baudrate anpassen, falls erforderlich
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
+
+  // Helligkeit einstellen (0-255)
+  //strip.setBrightness(128); // Beispiel: 50% Helligkeit
 }
 
 void rundumlichtEffekt(int dauer) {
   // Rundumlicht-Effekt
-  for (int i = 1; i < NUMPIXELS; i++) {
+  for (int i = 0; i < NUMPIXELS - 1; i++) {
+    strip.setPixelColor(6, strip.Color(255, 69, 0)); // Rot
     strip.setPixelColor(i, strip.Color(255, 69, 0)); // Rot
-    strip.setPixelColor(0, strip.Color(0, 0, 0)); // Rot
     strip.show();
     delay(dauer);
     strip.setPixelColor(i, strip.Color(0, 0, 0)); // Ausschalten
@@ -30,7 +33,7 @@ void rundumlichtEffekt(int dauer) {
 }
 
 void setzeFarbe(int r, int g, int b) {
-  strip.setPixelColor(0, strip.Color(r, g, b));
+  strip.setPixelColor(6, strip.Color(r, g, b));
   strip.show();
   // Speichere die zuletzt empfangenen RGB-Werte
   lastR = r;
@@ -66,11 +69,20 @@ void loop() {
 
       // Setze die Farbe auf Basis der empfangenen RGB-Werte
       setzeFarbe(r, g, b);
+    } else if (command == 'B') { // 'B' für "Brightness"
+      int brightnessValue = Serial.parseInt();
+      // Sicherstellen, dass der Helligkeitswert im gültigen Bereich liegt (0-255)
+      brightnessValue = constrain(brightnessValue, 0, 255);
+      // Helligkeit einstellen
+      strip.setBrightness(brightnessValue);
+      strip.show(); // Helligkeitseinstellung aktualisieren
+      Serial.print("Helligkeit geändert: ");
+      Serial.println(brightnessValue);
     }
   }
 
   if (ledstat == 1) {
-    rundumlichtEffekt(200);
+    rundumlichtEffekt(80);
   } else if (ledstat == 0) {
     strip.show(); // Initialize all pixels to 'off'
     // Setze die Farbe auf Basis der zuletzt empfangenen RGB-Werte
