@@ -31,11 +31,11 @@ object Form1: TForm1
     Text = 'Edit1'
   end
   object Label1: TLabel
-    Left = 105
+    Left = 85
     Height = 15
     Top = 210
-    Width = 111
-    Caption = 'Tim Eisenmann v0.08'
+    Width = 145
+    Caption = 'Tim Eisenmann v0.08-alpha'
     ParentColor = False
   end
   object ComboBox1: TComboBox
