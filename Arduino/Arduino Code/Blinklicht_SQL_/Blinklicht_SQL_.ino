@@ -1,4 +1,4 @@
-// Tim Eisenmann LEDWindowStateMonitor v0.06
+// Tim Eisenmann v0.08
 
 #include <Adafruit_NeoPixel.h>
 
@@ -16,6 +16,9 @@ void setup() {
   Serial.begin(9600); // Baudrate anpassen, falls erforderlich
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
+
+  // Helligkeit einstellen (0-255)
+  //strip.setBrightness(128); // Beispiel: 50% Helligkeit
 }
 
 void rundumlichtEffekt(int dauer) {
@@ -66,6 +69,15 @@ void loop() {
 
       // Setze die Farbe auf Basis der empfangenen RGB-Werte
       setzeFarbe(r, g, b);
+    } else if (command == 'B') { // 'B' für "Brightness"
+      int brightnessValue = Serial.parseInt();
+      // Sicherstellen, dass der Helligkeitswert im gültigen Bereich liegt (0-255)
+      brightnessValue = constrain(brightnessValue, 0, 255);
+      // Helligkeit einstellen
+      strip.setBrightness(brightnessValue);
+      strip.show(); // Helligkeitseinstellung aktualisieren
+      Serial.print("Helligkeit geändert: ");
+      Serial.println(brightnessValue);
     }
   }
 
