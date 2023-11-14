@@ -18,6 +18,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -31,11 +32,13 @@ type
     SQLTransaction1: TSQLTransaction;
     Timer1: TTimer;
     SerialPort: TBlockSerial;
+    Timer2: TTimer;
     TrayIcon1: TTrayIcon;
     XMLPropStorage1: TXMLPropStorage;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -43,6 +46,7 @@ type
     procedure FormWindowStateChange(Sender: TObject);
     procedure Timer1StartTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure Timer2Timer(Sender: TObject);
     procedure TrayIcon1Click(Sender: TObject);
   private
     { private declarations }
@@ -137,10 +141,29 @@ end;
 procedure TForm1.Edit1Change(Sender: TObject);
 begin
   if Edit1.Text='Ja' then
-    SerialPort.SendString('J')
+  begin
+  SerialPort.SendString('J');
+  SQLTransaction1.commit;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Text := 'UPDATE Status SET Status =:Status, Farbe =:Farbe WHERE Name = :Name';
+  SQLQuery1.Params.ParamByName('Name').Value := '115';
+  SQLQuery1.Params.ParamByName('Status').Value := 'J';
+  SQLQuery1.Params.ParamByName('Farbe').Value := Edit2.Text;
+  SqlQuery1.ExecSQL;
+  SqlTransaction1.Commit;
+  end
     else
-        SerialPort.SendString('N ' + Edit2.Text);
-
+    begin
+    SerialPort.SendString('N ' + Edit2.Text);
+    SQLTransaction1.commit;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Text := 'UPDATE Status SET Status =:Status, Farbe =:Farbe WHERE Name = :Name';
+    SQLQuery1.Params.ParamByName('Name').Value := '115';
+    SQLQuery1.Params.ParamByName('Status').Value := 'N';
+    SQLQuery1.Params.ParamByName('Farbe').Value := Edit2.Text;
+    SqlQuery1.ExecSQL;
+    SqlTransaction1.Commit;
+    end;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -189,6 +212,18 @@ begin
    SerialPort.SendString('N 0 0 0');
 end;
 
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  SQLTransaction1.commit;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Text := 'UPDATE Status SET Status =:Status, Farbe =:Farbe WHERE Name = :Name';
+  SQLQuery1.Params.ParamByName('Name').Value := '115';
+  SQLQuery1.Params.ParamByName('Status').Value := 'J';
+  SQLQuery1.Params.ParamByName('Farbe').Value := Edit2.Text;
+  SqlQuery1.ExecSQL;
+  SqlTransaction1.Commit;
+end;
+
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
@@ -217,6 +252,11 @@ begin
   FoundNetworkDatabase := False;
   EnumerateWindows;
   UpdateStatusLabel;
+end;
+
+procedure TForm1.Timer2Timer(Sender: TObject);
+begin
+
 end;
 
 

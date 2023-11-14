@@ -98,6 +98,15 @@ object Form1: TForm1
     TabOrder = 6
     Text = 'Edit3'
   end
+  object Button4: TButton
+    Left = 15
+    Height = 25
+    Top = 200
+    Width = 75
+    Caption = 'Button4'
+    OnClick = Button4Click
+    TabOrder = 7
+  end
   object Timer1: TTimer
     OnTimer = Timer1Timer
     OnStartTimer = Timer1StartTimer
@@ -255,7 +264,9 @@ object Form1: TForm1
   object MySQLConnection1: TMySQL56Connection
     Connected = False
     LoginPrompt = False
+    DatabaseName = 'LEDWindowsState'
     KeepConnection = False
+    Transaction = SQLTransaction1
     Options = []
     SkipLibraryVersionCheck = False
     left = 200
@@ -272,7 +283,7 @@ object Form1: TForm1
   end
   object SQLTransaction1: TSQLTransaction
     Active = False
-    Database = SQLConnector1
+    Database = MySQLConnection1
     Options = []
     left = 200
     top = 180
@@ -281,9 +292,14 @@ object Form1: TForm1
     Connected = False
     LoginPrompt = False
     KeepConnection = False
-    Transaction = SQLTransaction1
     Options = []
     left = 200
     top = 215
+  end
+  object Timer2: TTimer
+    Interval = 3000
+    OnTimer = Timer2Timer
+    left = 110
+    top = 200
   end
 end
