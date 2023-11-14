@@ -1,16 +1,16 @@
 object Form1: TForm1
   Left = 295
-  Height = 234
+  Height = 276
   Top = 327
   Width = 240
   Caption = 'LEDWindowStateMonitor'
-  ClientHeight = 234
+  ClientHeight = 276
   ClientWidth = 240
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnWindowStateChange = FormWindowStateChange
-  SessionProperties = 'ComboBox1.Text;Edit2.Text;Left;Top'
+  SessionProperties = 'ComboBox1.Text;Edit2.Text;Left;Top;Edit3.Text'
   ShowInTaskBar = stNever
   LCLVersion = '1.6.4.0'
   object LabelStatus: TLabel
@@ -31,11 +31,11 @@ object Form1: TForm1
     Text = 'Edit1'
   end
   object Label1: TLabel
-    Left = 105
+    Left = 85
     Height = 15
-    Top = 210
-    Width = 111
-    Caption = 'Tim Eisenmann v0.08'
+    Top = 245
+    Width = 145
+    Caption = 'Tim Eisenmann v0.08-alpha'
     ParentColor = False
   end
   object ComboBox1: TComboBox
@@ -84,17 +84,25 @@ object Form1: TForm1
   object Button3: TButton
     Left = 15
     Height = 25
-    Top = 200
+    Top = 235
     Width = 40
     Caption = 'Off'
     OnClick = Button3Click
     TabOrder = 5
   end
+  object Edit3: TEdit
+    Left = 10
+    Height = 23
+    Top = 60
+    Width = 80
+    TabOrder = 6
+    Text = 'Edit3'
+  end
   object Timer1: TTimer
     OnTimer = Timer1Timer
     OnStartTimer = Timer1StartTimer
-    left = 55
-    top = 55
+    left = 200
+    top = 60
   end
   object TrayIcon1: TTrayIcon
     BalloonHint = 'LEDWindowState'
@@ -236,13 +244,46 @@ object Form1: TForm1
       0000
     }
     OnClick = TrayIcon1Click
-    left = 15
-    top = 55
+    left = 200
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <>
     FileName = 'comport.xml'
-    left = 150
-    top = 15
+    left = 200
+    top = 30
+  end
+  object MySQLConnection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Options = []
+    SkipLibraryVersionCheck = False
+    left = 200
+    top = 110
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQLConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 200
+    top = 145
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLConnector1
+    Options = []
+    left = 200
+    top = 180
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    Options = []
+    left = 200
+    top = 215
   end
 end

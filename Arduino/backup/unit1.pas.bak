@@ -9,7 +9,7 @@ uses
   Windows,
   {$ENDIF}
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, XMLPropStorage, ComCtrls, Serial, Synaser;
+  ExtCtrls, XMLPropStorage, ComCtrls, Serial, Synaser, mysql56conn, sqldb, INIFiles;
 
 type
   { TForm1 }
@@ -21,9 +21,14 @@ type
     ComboBox1: TComboBox;
     Edit1: TEdit;
     Edit2: TEdit;
+    Edit3: TEdit;
     Label1: TLabel;
     LabelSelectedColor: TLabel;
     LabelStatus: TLabel;
+    MySQLConnection1: TMySQL56Connection;
+    SQLConnector1: TSQLConnector;
+    SQLQuery1: TSQLQuery;
+    SQLTransaction1: TSQLTransaction;
     Timer1: TTimer;
     SerialPort: TBlockSerial;
     TrayIcon1: TTrayIcon;
@@ -100,6 +105,9 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+var
+ INI:TINIFile;
+ host,nameh,pw,port:String;
 begin
     // Öffnen Sie die serielle Schnittstelle (angepasst an Ihren Arduino-Port und Baudrate)
   XMLPropStorage1.Restore;
@@ -112,6 +120,18 @@ begin
   TrayIcon1.ShowBalloonHint;
   sleep(500);
   SerialPort.SendString('N ' + Edit2.Text);
+  INI := TINIFile.Create('sqlhost.ini');
+  host := INI.ReadString('SQL','host','');
+  nameh := INI.ReadString('SQL','nameh','');
+  pw := INI.ReadString('SQL','pw','');
+  port := INI.ReadString('SQL','port','');
+
+
+    MySQLConnection1.HostName := host;
+    MySQLConnection1.UserName := nameh;
+    MySQLConnection1.Password := pw;
+    MySQLConnection1.Port:= StrToInt(port);
+    MySQLConnection1.DatabaseName := 'LEDWindowState';
 end;
 
 procedure TForm1.Edit1Change(Sender: TObject);
