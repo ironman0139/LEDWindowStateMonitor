@@ -24,9 +24,9 @@ void setup() {
 void rundumlichtEffekt(int dauer) {
   // Rundumlicht-Effekt
   for (int i = 0; i < NUMPIXELS - 1; i++) {
-    strip.setPixelColor(6, strip.Color(255, 69, 0)); // Rot
+    strip.setPixelColor(6, strip.Color(255, 0, 0)); // Rot
     strip.setPixelColor(i, strip.Color(255, 0, 0)); // Rot
-    strip.setPixelColor(i+1, strip.Color(255, 255, 0)); // Rot
+    strip.setPixelColor(i+1, strip.Color(245, 100, 0)); // Rot
     strip.show();
     delay(dauer);
     strip.setPixelColor(i, strip.Color(0, 0, 0)); // Ausschalten
