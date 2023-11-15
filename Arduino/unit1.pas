@@ -18,6 +18,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -31,6 +32,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -167,6 +169,11 @@ end;
 procedure TForm1.Button3Click(Sender: TObject);
 begin
    SerialPort.SendString('N 0 0 0');
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+   SerialPort.SendString('N '+ Edit2.Text);
 end;
 
 
